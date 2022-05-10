@@ -13,7 +13,7 @@ export function ReactProjects(){
             </div>
         </div>
         </a>
-        <a href="https://weather-app-29301.web.app" target="_blank">
+        <a href="https://weather-app-23924.web.app" target="_blank">
             <div class="project-card weather-card">
                 <img src="img/weather-screen.png" class="card-img-top" alt="...">
                 <div class="card-body">
