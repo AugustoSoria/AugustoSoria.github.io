@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Ubuntu:ital,wght@1,700&display=swap');
+
+/* ----- GENERALES -----  */
+
 :root {
     --background-body: #222831;
     --background: #393E46;
@@ -5,9 +9,20 @@
     --font: #EEEEEE;
 }
 
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--background-body);
-    color: var(--font)
+    color: var(--font);
+    margin: 0;
+    overflow-x: hidden;
+    font-family: monospace;
 }
 
 body::-webkit-scrollbar {
@@ -16,56 +31,138 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--font);
     border-radius: 10px;
 }
 
 a {
-    text-decoration: none !important;
+    text-decoration: none;
+    color: black;
 }
 
-a.logo {
-    color: var(--prominent)
+.block-scroll {
+    overflow: hidden
 }
 
-.navbar {
-    backdrop-filter: blur(15px) !important;
+h2, h3 {
+    font-family: 'Inter', sans-serif;
+}
+
+button {
+    font-family: monospace;
+}
+
+/* ----- NAVBAR -----  */
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(15px);
     box-shadow: -10px -5px 15px var(--prominent);
+    height: 55px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    padding: 0 2em;
 }
 
-.navbar-brand, .nav-link{
-    color: var(--prominent) !important;
+.material-symbols-outlined {
+    display: none;
+    cursor: pointer;
 }
 
-.navbar-nav {
-    margin-left: auto !important;
+.navbar-ul-container {
+    display: block;
+    transition: left 0.5s ease;
 }
 
-.perfil {
-    height: 400px;
-    width: 700px;
-    margin-top: 150px;
+.navbar-ul-container.open {
+    left: 0;
+    display: block;
 }
 
-.perfil-img {
+.navBar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+.navBar li {
+    margin-left: 1em;
+}
+
+.navBar a {
+    color: var(--prominent);
+    text-decoration: none;
+    transition: color ease-in-out .3s;
+}
+
+.navBar .border-effect::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--prominent);
+    transition: width .3s;
+}
+
+.navBar a:hover {
+    color: var(--font);
+}
+
+.navBar .border-effect:hover::after {
+    width: 100%;
+}
+
+/* ----- PRESENTACION -----  */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#personal-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 11em 0;
+}
+
+#personal-section img {
     border-radius: 50%;
-    width: 210px;
 }
 
-.box-dialogue {
+#personal-description {
     background-color: var(--background);
-    width: 400px;
+    width: 350px;
     border-radius: 10px;
+    margin-top: 2em;
 }
 
 p.arrow {
     position: relative;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+    padding: 1em;
 }
 
 .arrow::after {
     content: "";
-    top: -20px;
-    left: 190px;
+    top: -35px;
+    left: 45%;;
     
     position: absolute;
     border-left: 20px solid transparent;
@@ -73,100 +170,212 @@ p.arrow {
     border-bottom: 20px solid var(--background);
 }
 
-section {
-    width: 100%;
-    min-height: 500px;
+/* ----- SOBRE MI -----  */
+
+#about div:first-of-type{
+    max-width: 600px;
 }
 
-.btn-cv {
+#about p {
+    font-size: large;
+    padding: 0 1em;
+}
+
+#cv-btn {
     color: var(--font);
     background-color: var(--prominent);
     height: 40px;
     width: 135px;
+    border: none;
+    border-radius: 10px;
+    font-size: medium;
 }
 
-.div-card a {
-    color: black;
+#skill-container {
+    margin-top: 3em;
 }
 
-.div-card a:hover {
-    color: black;
+#skill-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.skills h3 {
-    margin: 30px 0px;
+#skill-card-container img {
+    width: 64px;
+    height: 64px;
 }
 
-.cards img {
-    display: block;
-    width: 50%;
+.skill-card {
+    margin: 1em 3em;
+    transition: all ease-in-out .4s;
+}
+
+.skill-card.mocha-chai-card img {
+    object-fit: contain;
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+}
+
+.skill-card h5{
+    margin: 0;
+}
+
+/* ----- PORTFOLIO -----  */
+
+#portfolio {
+    margin: 2em 0;
+}
+
+#portfolio h2:first-of-type {
+    margin-bottom: 2em;
+}
+
+.portfolio-btns {
+    position: relative;
+    width: 165px;
+    height: 50px;
+}
+
+#react-btn, #angular-btn, #vue-btn {
+    width: 50px;
+    filter: hue-rotate(340deg);
+    border: 1px solid #eeeeee1f;
+    border-radius: 50%;
+    padding: 7px;
+    transition: all 0.5s ease;
+    position: absolute;
+}
+
+#react-btn {
+    left: 0;
+}
+
+#angular-btn {
+    filter: hue-rotate(197deg);
+    left: 57px;
+}
+
+#vue-btn {
+    filter: hue-rotate(20deg);
+    padding: 5px;
+    right: 0;
+}
+
+#react-btn:hover, #angular-btn:hover, #vue-btn:hover {
+    filter: hue-rotate(360deg);
+}
+
+.projects-container {
+    min-height: 472px;
+}
+
+.project-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 650px;
+    min-height: 472px;
+    /* opacity: 0; */
+}
+
+/* .project-cards-container.show {
+    opacity: 1;
+} */
+
+#portfolio .project-cards-container h2{
     margin: auto;
 }
 
-.cards {
-    transition: all ease-in-out 0.2s;
-    align-items: center;
+.project-cards-container a {
+    height: 420px;
+    margin: 2em 1em;
 }
 
-.cards:hover {
-    transform: scale(1.05);
+.project-card {
+    width: 286px;
+    height: 420px;
+    background-color: var(--font);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--prominent);
 }
 
-.cards h5 {
-    text-align: center;
-    font-size: 15px;
-}
-
-.card {
-    height: 422px;
-}
-
-.card img{
+img.card-img-top {
+    width: 286px;
+    height: 280px;
     object-fit: cover;
     object-position: top;
     overflow: hidden;
 }
 
-#form {
-    width: 60vw;
-    margin: auto;
+.card-body {
+    padding: 0.5em 0;
 }
 
-label, #message, button {
-    border-radius: 10px;
+.card-text {
+    padding: 0 1em;
+}
+
+/* ----- CONTACTO -----  */
+
+#contact h2{ 
+    margin-bottom: 2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+}
+form input, label {
+    width: 370px;
+}
+
+form input {
+    background-color: transparent;
     border: none;
-}
-
-label {
-    margin-top: 10px;
-}
-
-input {
-    padding: 0 5px;
-    background: none;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid rgb(4, 4, 32);
+    border-bottom: 2px solid var(--font);
+    margin: 1em 0;
     color: var(--font);
 }
 
-#message {
+form textarea {
+    width: 370px;
+    margin: 1em 0px;
+    border-radius: 10px;
     resize: none;
-    outline: none;
 }
 
-footer a {
-    text-decoration: none;
-    color: white;
-    transition: all ease-in-out 0.2s
+button[type=submit] {
+    border-radius: 10px;
+    border: none;
+    width: 370px;
+    height: 26px;
 }
 
-footer a:hover {
-    color: var(--prominent);
+/* ----- FOOTER -----  */
+
+footer {
+    text-align: center;
+    margin: 3em 0 0.5em 0;
+}
+
+footer svg {
+    color: var(--font);
+    transition: all ease-in-out 0.2s;
+    margin: 0 0.3em;
+}
+
+footer svg:hover {
     transform: scale(2.05);
+    color: var(--prominent);
 }
 
-/* animations */
+/* ----- GSAP ----- */
 
 .trans0, .trans1, .trans2, .trans3 {
     opacity: 0;
@@ -181,13 +390,30 @@ footer a:hover {
     position: relative;
 }
 
-body {
-    overflow-x: hidden;
-}
+/* ----- RESPONSIVE -----  */
 
-@media (max-width: 1000px) {
-    .proyect-card {
-        flex-direction: column !important;
-        align-items: center !important;
+@media (max-width: 500px) {
+    .material-symbols-outlined {
+        display: block;
+    }
+    .navBar .navbar-ul-container ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    .navbar-ul-container {
+        position: absolute;
+        top: 55px;
+        left: -100%;
+        backdrop-filter: blur(15px);
+        border: 1px solid;
+        width: 100%;
+        padding: 2em;
+        text-align: center;
+        line-height: 2em;
+        background-color: var(--background-body);
+    }
+
+    form label, form input, form textarea, form button[type="submit"] {
+        width: 300px;
     }
 }

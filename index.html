@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="shortcut icon" type="image/x-icon" href="img/As.ico" />
     <link rel="stylesheet" href="style.css">
     <title>Augusto Soria - Full Stack Developer</title>
@@ -12,228 +14,175 @@
 <body>
     <div class="animation-container">
         <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand logo" href="#">{As}</a>
-    
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-    
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#about">Sobre mí</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-                
+        <nav class="navBar">
+            <a href="#">{As}</a>
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+            <div class="navbar-ul-container">
+                <ul class="navbar-ul">
+                    <li>
+                        <a href="#" class="border-effect">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="border-effect">Sobre mí</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="border-effect">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="border-effect">Contacto</a>
+                    </li>
+                </ul>
             </div>
-            </nav>
+        </nav>
     
         <main>
             <!-- PRESENTACION -->
-            <section class="d-flex justify-content-center align-items-center">
-                <div class="container d-flex flex-column align-items-center p-4 mb-5 trans1 perfil">
-                    <div>
-                        <img class="d-flex mx-auto perfil-img" src="img\perfil.jpg" alt="">
-                    </div>
-                    <div class="box-dialogue mt-5">
-                        <p class="text-center pt-3 fs-5 fw-bold arrow">Hola! Soy un Full Stack Developer de Mendoza, Argentina. Este es mi web personal. Bienvenidos!</p>
-                    </div>
+            <section id="personal-section" class="trans1">
+                <div>
+                    <img src="img\perfil.jpg" alt="perfil-img">
+                </div>
+                <div id="personal-description">
+                    <p class="arrow">Hola! Soy un Full Stack Developer de Mendoza, Argentina. Este es mi web personal. Bienvenidos!</p>
                 </div>
             </section>
     
-            <!-- Sobre mi -->
-            <section class="container d-flex flex-wrap pt-5 mt-5 trans2" id="about">
-                <div class='pe-lg-5' >
+            <!-- SOBRE MI -->
+            <section id="about" class="trans2">
+                <div>
                     <h2>Sobre mí</h2>
-                    <p class="ps-3">Disfruto mucho construyendo web apps, tanto de la sensación de realización cuando se termina un proyecto y es funcional, como del proceso de debbugear y "rabear" porque las cosas no salen como uno espera. Tengo experiencia tanto del lado front-end como back-end, no sabría cuál de los dos lados elegir porque disfruto de ambos y quiero aprender mucho tanto de uno como del otro, sé que es un largo camino pero disfruto del recorrido.</p>
-                    <a class="ps-3" href="cv\Augusto Soria - CV.pdf" target="_blank">
-                        <button type="button" class="btn-cv">
+                    <p>Disfruto mucho construyendo webs, tanto de la sensación de realización cuando se termina un proyecto y es funcional, como del proceso de debbugear y "rabear" porque las cosas no salen como uno espera. Tengo experiencia tanto del lado front-end como back-end, no sabría cuál de los dos lados elegir porque disfruto de ambos y quiero aprender mucho tanto de uno como del otro, sé que es un largo camino pero disfruto del recorrido.</p>
+                    <a href="cv\Augusto Soria - CV.pdf" target="_blank">
+                        <button type="button" id="cv-btn">
                             Ver Currículum
                         </button>
                     </a>
                 </div>
-                <div class="container skills p-0 m-3">
+                <div id="skill-container">
                     <h3>Skills</h3>
-                    <div class="d-flex flex-wrap justify-content-center">
-                        <div class="cards html-card m-2 mx-xl-3 mx-xl-3">
+                    <div id="skill-card-container">
+                        <div class="skill-card html-card">
                             <img src="./img/html5.png" alt="">
                             <h5>HTML</h5>
                         </div>
-                        <div class="cards css-card m-2 mx-xl-3 mx-xl-3">
+                        <div class="skill-card css-card">
                             <img src="./img/css.png" alt="">
                             <h5>CSS</h5>
                         </div>
-                        <div class="cards js-card m-2 mx-xl-3 mx-xl-3">
+                        <div class="skill-card js-card">
                             <img src="./img/javascript.png" alt="">
                             <h5>Javascript</h5>
                         </div>
-                        <div class="cards btp-card m-2 mx-xl-3 mx-xl-3">
+                        <div class="skill-card btp-card">
                             <img src="./img/bootstrap.png" alt="">
                             <h5>Bootstrap</h5>
                         </div>
-                        <div class="cards react-card m-2 mx-xl-3 mx-xl-3">
+                        <div class="skill-card react-card">
                             <img src="./img/react.png" alt="">
                             <h5>React</h5>
                         </div>
-                        <div class="cards next-card m-2 mx-xl-3 mx-xl-3">
+                        <div class="skill-card next-card">
                             <img src="./img/nextjs.png" alt="">
                             <h5>Next</h5>
                         </div>
-                        <div class="cards redux-card m-2 mx-xl-3 mx-xl-3">
+                        <div class="skill-card redux-card">
                             <img src="./img/redux.png" alt="">
                             <h5>Redux</h5>
                         </div>
-                        <div class="cards angular-card m-2 mx-xl-3 mx-xl-3">
+                        <div class="skill-card angular-card">
                             <img src="img\angular.png" alt="">
                             <h5>Angular</h5>
                         </div>
-                        <div class="cards rxjs-card m-2 mx-xl-3 mx-xl-3">
+                        <div class="skill-card rxjs-card">
                             <img src="img\rxjs.png" alt="">
                             <h5>RxJs</h5>
                         </div>
-                        <div class="cards ngrx-card m-2 mx-xl-3 mx-xl-3">
+                        <div class="skill-card ngrx-card">
                             <img src="img\ngrx.png" alt="">
                             <h5>NgRx</h5>
                         </div>
-                        <div class="cards ts-card m-2 mx-xl-3 mx-xl-3">
+                        <div class="skill-card ts-card">
                             <img src="img\ts.png" alt="">
                             <h5>TypeScript</h5>
                         </div>
-                        <div class="cards cmder-card m-2 mx-xl-3 mx-xl-3">
+                        <div class="skill-card cmder-card">
                             <img src="img\cmder.jpg" alt="">
                             <h5>CMDER</h5>
                         </div>
-                        <div class="cards git-card m-2 mx-xl-3 mx-xl-3">
+                        <div class="skill-card git-card">
                             <img src="./img/git.png" alt="">
                             <h5>GIT</h5>
                         </div>
-                        <div class="cards node-card m-2 mx-xl-3 mx-xl-3">
+                        <div class="skill-card node-card">
                             <img src="./img/node.png" alt="">
                             <h5>Node</h5>
                         </div>
-                        <div class="cards exps-card m-2 mx-xl-3 mx-xl-3">
+                        <div class="skill-card exps-card">
                             <img src="./img/express.png" alt="">
                             <h5>Express</h5>
                         </div>
-                        <div class="cards mongo-card m-2 mx-xl-3 mx-xl-3">
+                        <div class="skill-card mocha-chai-card">
+                            <img src="./img/mocha-chai.png" alt="">
+                            <h5>Mocha-Chai</h5>
+                        </div>
+                        <div class="skill-card mongo-card">
                             <img src="./img/mongodb.png" alt="">
                             <h5>MongoDB</h5>
                         </div>
-                        <div class="cards sql-card m-2 mx-xl-3 mx-xl-3">
+                        <div class="skill-card sql-card">
                             <img src="img\mysql.png" alt="">
                             <h5>MySQL</h5>
                         </div>
                     </div>
-    
                 </div>
             </section>
     
             <!-- PORTFOLIO -->
-            <section class="container pt-5 trans3" id="portfolio">
+            <section id="portfolio"  class="trans3">
                 <h2>Portfolio</h2>
-                <div class="d-flex flex-wrap justify-content-center mx-2 my-4 div-card">
-                    <a href="https://github.com/AugustoSoria/E-commerce" target="_blank">
-                        <div class="card mx-2 my-2 proyect-card ecommerce-card" style="width: 18rem;">
-                            <img src="img\e-commerce-screen.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <img style="width: 30px;" src="img\angular.png"/>
-                                <img style="width: 30px;" src="img\rxjs.png"/>
-                                <img style="width: 30px;" src="img\ngrx.png"/>
-                                <img style="width: 30px;" src="img\node.png"/>
-                                <img style="width: 30px;" src="img\express.png"/>
-                                <img style="width: 30px;" src="img\mysql.png"/>
-                                <p class="card-text">Aplicación e-commerce hecha Angular 13, NgRx, Node Js, Express Js, MySql, JWT.</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://search-offers-job-app.web.app" target="_blank">
-                        <div class="card mx-2 my-2 proyect-card jobs-card" style="width: 18rem;">
-                            <img src="img\jobs-screen.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <img style="width: 30px;" src="img\angular.png"/>
-                                <img style="width: 30px;" src="img\rxjs.png"/>
-                                <p class="card-text">Aplicación sobre ofertas laborales hecha con Angular 13, consumiendo la api Remotive.io.</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://github.com/AugustoSoria/News-app" target="_blank">
-                        <div class="card mx-2 my-2 proyect-card news-card" style="width: 18rem;">
-                            <img src="img\news-app.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <img style="width: 30px;" src="img\react.png"/>
-                                <img style="width: 30px;" src="img\nextjs.png"/>
-                                <p class="card-text">Aplicación sobre noticias hecha con React y Next Js, consumiendo la api Newsapi.org.</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://weather-app-29301.web.app" target="_blank">
-                        <div class="card mx-2 my-2 proyect-card weather-card" style="width: 18rem;">
-                            <img src="img\weather-screen.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <img style="width: 30px;" src="img\react.png"/>
-                                <p class="card-text">Aplicación que indica el clima hecha con React, consumiendo la api Metaweather.</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://to-do-list-app-ce91a.web.app" target="_blank">
-                        <div class="card mx-2 my-2 proyect-card todolist-card" style="width: 18rem;">
-                            <img src="img\To-Do-App.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <img style="width: 30px;" src="img\react.png"/>
-                                <p class="card-text">Aplicación To-Do-List responsive hecha con create-react-app.</p>
-                            </div>
-                        </div>
-                    </a>
+                <div class="portfolio-btns">
+                    <img src="img/react.png" id="react-btn"></img>
+                    <img src="img/angular.png" id="angular-btn"></img>
+                    <img src="img/vue.png" id="vue-btn"></img>
+                </div>
+                <div class="projects-container">
+                    
                 </div>
             </section>
     
             <!-- CONTACTO -->
-            <section class="container pt-5 trans4" id="contacto">
+            <section id="contact"  class="trans4">
                 <h2>Contacto</h2>
-                    <form id="form" action="" method="post" class="d-flex flex-column container">
+                    <form id="form" action="" method="post" >
                         <label for="name">Nombre Completo</label>
                         <input name="name" type="text" id="name" required>
                         <label for="email">Correo electrónico</label>
                         <input name="email" type="text" id="email" required>
-                        <label for="message" class="mb-2">Mensaje</label>
+                        <label for="message">Mensaje</label>
                         <textarea id="message" name="message" cols="30" rows="10" required></textarea>
-                        <button type="submit" class="mt-2">Enviar mensaje</button>
+                        <button type="submit">Enviar mensaje</button>
                     </form>
                     <a href="mailto:augustosoria@hotmail.es" id="mailto"></a>
             </section>
         </main>
     
-        <footer class="my-3">
-            <div class="d-flex justify-content-center mt-5">
-                <a href="https://github.com/AugustoSoria" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github mx-2" viewBox="0 0 16 16">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                    </svg>
-                </a>
-                <a href="https://www.linkedin.com/in/augusto-soria-a8b7251b7/" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin mx-2" viewBox="0 0 16 16">
-                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                    </svg>
-                </a>
-            </div>
+        <footer>
+            <a href="https://github.com/AugustoSoria" target="_blank" title="github personal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github mx-2" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/augusto-soria-a8b7251b7/" target="_blank" title="linkedin personal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin mx-2" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                </svg>
+            </a>
         </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
-    <script src="./index.js"></script>
+    <script type="module" src="./app.js" defer></script>
 </body>
 </html>
