@@ -20,7 +20,11 @@ menuBtn.addEventListener('click', (e) => {
     e.stopPropagation()
 })
 document.documentElement.addEventListener('click', (e) => {
+    if(e.target.className == 'navbar-ul-container open' || 
+        e.target.children[0]?.className == "border-effect") return;
+    
     navbarUlContainer.classList.remove('open');
+    document.documentElement.classList.remove('block-scroll')
 })
 
 
