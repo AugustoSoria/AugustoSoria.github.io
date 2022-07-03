@@ -140,8 +140,19 @@ section {
     margin: 11em 0;
 }
 
-#personal-section img {
+.profile-img-container {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
     border-radius: 50%;
+}
+
+.profile-img-container img {
+    object-fit: contain;
+    width: 325px;
+    height: 325px;
+    object-position: -1px -6px;
 }
 
 #personal-description {
