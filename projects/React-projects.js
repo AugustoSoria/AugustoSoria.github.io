@@ -11,7 +11,7 @@ export function ReactProjects(){
                 <p class="card-text">Aplicación sobre noticias hecha con ReactJs y NextJs, consumiendo la api Newsapi.org.</p>
             </div>
         </div>
-        <div class="project-card weather-card" data-link-web="https://weather-app-29301.web.app" data-link-gitHub="https://github.com/AugustoSoria/Weather-App">
+        <div class="project-card weather-card" data-link-web="https://weatherapp-776be.web.app" data-link-gitHub="https://github.com/AugustoSoria/Weather-App">
             <img src="img/projects/weather-screen.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <div class="tech-img-container">
