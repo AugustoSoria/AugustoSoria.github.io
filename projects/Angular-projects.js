@@ -15,7 +15,7 @@ export function AngularProjects(){
                 <p class="card-text">Aplicación e-commerce hecha Angular 13, NgRx, Node Js, Express Js, MySql, JWT.</p>
             </div>
         </div>
-        <div class="project-card jobs-card" data-link-web="https://job-search-app-a7b8c.web.app" data-link-gitHub="https://github.com/AugustoSoria/Job-Searcher-App">
+        <div class="project-card jobs-card" data-link-web="https://search-offers-job-app.web.app/" data-link-gitHub="https://github.com/AugustoSoria/Job-Searcher-App">
             <img src="img/projects/jobs-screen.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <div class="tech-img-container">
