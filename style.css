@@ -13,28 +13,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--background-body);
-    color: var(--font);
-    margin: 0;
-    overflow-x: hidden;
-    font-family: monospace;
-}
-
-body::-webkit-scrollbar {
-    width: 5px;
-    background-color: black;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: var(--font);
-    border-radius: 10px;
-}
-
 a {
     text-decoration: none;
     color: black;
@@ -50,6 +28,47 @@ h2, h3 {
 
 button {
     font-family: monospace;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ----- BODY -----  */
+
+body {
+    background-color: var(--background-body);
+    color: var(--font);
+    margin: 0;
+    overflow-x: hidden;
+    font-family: monospace;
+
+    background-color: #222831;
+    background-image: linear-gradient(43deg, #222831 20%, #00adb52e 45%, #222831 72%);
+    background-size: 180% 180%;
+    animation: gradient-animation 15s ease-out infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    background-color: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--font);
+    border-radius: 10px;
 }
 
 /* ----- NAVBAR -----  */
@@ -354,7 +373,6 @@ p.arrow {
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid var(--prominent);
-    cursor: pointer;
     margin: 2em 1em;
 }
 
@@ -364,6 +382,7 @@ img.card-img-top {
     object-fit: cover;
     object-position: top;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .card-body {

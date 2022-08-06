@@ -42,25 +42,25 @@ function openModalProjectsLinks(evt) {
     evt.preventDefault()
 
     const path = evt.composedPath()
-    let clickedElement = path.find(e => /^project-card\s/.test(e.className));
-    
-    if(clickedElement) {
-        evt.stopPropagation();
+    let clickedImgCard = path.find(e => /\bcard-img-top\b/.test(e.className));
+    let clickedProjectCard = path.find(e => /\bproject-card\b/.test(e.className));
+    if(!clickedImgCard) return;
 
-        let webIcon = modal.querySelector('a[title="web deploy"]');
-        let gHIcon = modal.querySelector('a[title="github repositorio"]');
+    evt.stopPropagation();
 
-        modal.style.left = `${evt.pageX + 15}px`;
-        modal.style.top = `${evt.pageY - 54}px`;
+    let webIcon = modal.querySelector('a[title="web deploy"]');
+    let gHIcon = modal.querySelector('a[title="github repositorio"]');
 
-        webIcon.href = clickedElement.dataset.linkWeb;
-        gHIcon.href = clickedElement.dataset.linkGithub;
+    modal.style.left = `${evt.pageX + 15}px`;
+    modal.style.top = `${evt.pageY - 54}px`;
 
-        /^\/$/.test(clickedElement.dataset.linkWeb) ? webIcon.style.cursor = 'not-allowed' : webIcon.style.cursor = 'pointer';
-        /^\/$/.test(clickedElement.dataset.linkGithub) ? gHIcon.style.cursor = 'not-allowed' : gHIcon.style.cursor = 'pointer';
+    webIcon.href = clickedProjectCard.dataset.linkWeb;
+    gHIcon.href = clickedProjectCard.dataset.linkGithub;
 
-        modal.style.opacity = '1';
-    }
+    /^\/$/.test(clickedProjectCard.dataset.linkWeb) ? webIcon.style.cursor = 'not-allowed' : webIcon.style.cursor = 'pointer';
+    /^\/$/.test(clickedProjectCard.dataset.linkGithub) ? gHIcon.style.cursor = 'not-allowed' : gHIcon.style.cursor = 'pointer';
+
+    modal.style.opacity = '1';
 }
 
 function GSAPAnimations() {
