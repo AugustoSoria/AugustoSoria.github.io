@@ -1,7 +1,7 @@
 export function AngularProjects(){
 
     return (
-        `<div class="project-card ecommerce-card" data-link-web="/" data-link-gitHub="https://github.com/AugustoSoria/E-commerce">
+        `<div class="project-card ecommerce-card" data-link-web="https://e-commerce-app-dfeff.web.app" data-link-gitHub="https://github.com/AugustoSoria/E-commerce">
             <img src="img/projects/e-commerce-screen.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <div class="tech-img-container">
