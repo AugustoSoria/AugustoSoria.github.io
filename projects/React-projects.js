@@ -2,7 +2,7 @@ export function ReactProjects(){
 
     return  (
         `
-        <div class="project-card news-card" data-link-web="/" data-link-web="https://ssr-news-challenge.herokuapp.com/" data-link-gitHub="https://github.com/AugustoSoria/SSR-NewsApp">
+        <div class="project-card news-card" data-link-web="https://ssr-news-challenge.herokuapp.com/" data-link-gitHub="https://github.com/AugustoSoria/SSR-NewsApp">
             <img src="img/projects/ssr-news-challenge.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <div class="tech-img-container">
