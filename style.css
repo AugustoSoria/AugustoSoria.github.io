@@ -86,7 +86,7 @@ body::-webkit-scrollbar-thumb {
     padding: 0 2em;
 }
 
-.material-symbols-outlined {
+#responsiveMenu {
     display: none;
     cursor: pointer;
 }
@@ -105,6 +105,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     list-style: none;
     margin: 0;
+    align-items: center;
 }
 
 .navBar li {
@@ -117,6 +118,22 @@ body::-webkit-scrollbar-thumb {
     transition: color ease-in-out .3s;
 }
 
+.navBar hr {
+    width: 1px;
+    height: 23px;
+    margin-left: 1em;
+}
+
+.navbar-ul span.material-symbols-outlined {
+    font-size: 18px;
+    color: var(--prominent);
+    cursor: pointer;
+}
+
+.navbar-ul input[type="checkbox"] {
+    display: none;
+}
+
 .navBar .border-effect::after {
     content: "";
     display: block;
@@ -126,7 +143,7 @@ body::-webkit-scrollbar-thumb {
     transition: width .3s;
 }
 
-.navBar a:hover {
+.navBar a:hover, .navBar span.material-symbols-outlined:hover {
     color: var(--font);
 }
 
@@ -211,7 +228,7 @@ p.arrow {
     padding: 0 1em;
 }
 
-#cv-btn {
+#cvBtn {
     color: var(--font);
     background-color: var(--prominent);
     height: 40px;
@@ -468,7 +485,7 @@ footer svg:hover {
 /* ----- RESPONSIVE -----  */
 
 @media (max-width: 500px) {
-    .material-symbols-outlined {
+    #responsiveMenu {
         display: block;
     }
     .navBar .navbar-ul-container ul {
@@ -486,6 +503,12 @@ footer svg:hover {
         text-align: center;
         line-height: 2em;
         background-color: var(--background-body);
+    }
+    
+    .navbar-ul-container .navbar-ul hr {
+        height: 1px;
+        width: 295px;
+        margin-bottom: 1em;
     }
 
     form label, form input, form textarea, form button[type="submit"] {
