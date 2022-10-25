@@ -1,7 +1,8 @@
 import { ReactProjects } from './projects/React-projects.js'
-import { removeModals, openMobileMenu, showProject, openModalProjectsLinks, GSAPAnimations } from './functions.js'
+import { removeModals, openMobileMenu, showProject, openModalProjectsLinks, GSAPAnimations, changeLanguage } from './functions.js'
 
 const menuBtn = document.querySelector('.material-symbols-outlined')
+const translateBtn = document.querySelector("#translateBtn")
 const projectsContainer = document.querySelector('.projects-container')
 const portfolio = document.querySelector('section#portfolio')
 const $form = document.querySelector('#form')
@@ -13,6 +14,7 @@ document.documentElement.addEventListener('click', removeModals)
 
 // -------------------------------- navbar -------------------------------- 
 menuBtn.addEventListener('click', openMobileMenu)
+translateBtn.addEventListener('click', changeLanguage)
 
 // -------------------------------- projects section --------------------------------
 let $divProjectCardsContainer = document.createElement("div")
