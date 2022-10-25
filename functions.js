@@ -1,10 +1,13 @@
 import { ReactProjects } from './projects/React-projects.js'
 import { AngularProjects } from './projects/Angular-projects.js'
 import { NodeProjects } from './projects/Node-projects.js'
+import translations from './translations.js'
 
 const navbarUlContainer = document.querySelector('.navbar-ul-container')
 const modal = portfolio.querySelector(".modal-links")
 const projectsContainer = document.querySelector('.projects-container')
+
+let language;
 
 function removeModals(evt) {
     if(evt.target.className == 'navbar-ul-container open' || 
@@ -35,6 +38,7 @@ function showProject(evt, $div) {
     projectsContainer.innerHTML = ""
     projectsContainer.appendChild($div);
 
+    translate()
     projectsAnimations()
 }
 
@@ -115,10 +119,22 @@ function projectsAnimations() {
     )
 }
 
+function translate() {
+    const translatableElements = document.querySelectorAll(".translatable")
+    translatableElements.forEach(e => e.innerHTML = translations[language][e.id])
+}
+
+function changeLanguage(evt) {
+    language = evt.target.checked ? "english" : "español"
+    translate()
+}
+
 export {
     removeModals,
     openMobileMenu,
     showProject,
     openModalProjectsLinks,
-    GSAPAnimations
+    GSAPAnimations,
+    translate,
+    changeLanguage
 }
