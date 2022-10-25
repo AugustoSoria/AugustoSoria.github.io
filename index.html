@@ -16,22 +16,29 @@
         <!-- NAVBAR -->
         <nav class="navBar">
             <a href="#">{As}</a>
-            <span class="material-symbols-outlined">
+            <span class="material-symbols-outlined" id="responsiveMenu">
                 menu
             </span>
             <div class="navbar-ul-container">
                 <ul class="navbar-ul">
                     <li>
-                        <a href="#" class="border-effect">Inicio</a>
+                        <a href="#" class="border-effect translatable" id="homeLink">Inicio</a>
                     </li>
                     <li>
-                        <a href="#about" class="border-effect">Sobre mí</a>
+                        <a href="#about" class="border-effect translatable" id="aboutLink">Sobre mí</a>
                     </li>
                     <li>
                         <a href="#portfolio" class="border-effect">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#contact" class="border-effect">Contacto</a>
+                        <a href="#contact" class="border-effect translatable" id="contactLink">Contacto</a>
+                    </li>
+                    <hr/>
+                    <li>
+                        <label for="translateBtn">
+                            <span class="material-symbols-outlined border-effect"> translate </span>
+                        </label>
+                        <input type="checkbox" id="translateBtn">
                     </li>
                 </ul>
             </div>
@@ -44,23 +51,23 @@
                     <img src="img/perfil.jpeg" alt="perfil-img">
                 </div>
                 <div id="personal-description">
-                    <p class="arrow">Hola! Soy un Full-Stack Developer de Mendoza, Argentina. Este es mi web personal. Bienvenidos!</p>
+                    <p class="arrow translatable" id="presentation">Hola! Soy un Full-Stack Developer de Mendoza, Argentina. Este es mi web personal. Bienvenidos!</p>
                 </div>
             </section>
     
             <!-- SOBRE MI -->
             <section id="about" class="trans2">
                 <div>
-                    <h2>Sobre mí</h2>
-                    <p>Disfruto mucho construyendo webs, tanto de la sensación de realización cuando se termina un proyecto y es funcional, como del proceso de debbugear y "rabear" porque las cosas no salen como uno espera. Tengo experiencia tanto del lado Front-end como Back-end, no sabría cuál de los dos lados elegir porque disfruto de ambos y quiero aprender mucho tanto de uno como del otro, sé que es un largo camino pero disfruto del recorrido.</p>
+                    <h2 class="translatable" id="aboutMeTitle">Sobre mí</h2>
+                    <p class="translatable" id="aboutMe">Disfruto mucho construyendo webs, tanto de la sensación de realización cuando se termina un proyecto y es funcional, como del proceso de debbugear y "rabear" porque las cosas no salen como uno espera. Tengo experiencia tanto del lado Front-end como Back-end, no sabría cuál de los dos lados elegir porque disfruto de ambos y quiero aprender mucho tanto de uno como del otro, sé que es un largo camino pero disfruto del recorrido.</p>
                     <a href="cv\Augusto Soria - CV.pdf" target="_blank">
-                        <button type="button" id="cv-btn">
+                        <button type="button" id="cvBtn" class="translatable">
                             Ver Currículum
                         </button>
                     </a>
                 </div>
                 <div id="skill-container">
-                    <h3>Skills</h3>
+                    <h3 class="translatable" id="technologies">Tecnologias</h3>
                     <div id="skill-card-container">
                         <div class="skill-card html-card">
                             <img src="./img/skills/html5.png" alt="">
@@ -146,7 +153,7 @@
             <section id="portfolio" class="trans3">
                 <h2>Portfolio</h2>
                 <div class="portfolio-btns">
-                    <img src="img/skills/react.png" id="react-btn" title="ReactJs projects"></img>
+                    <img src="img/skills/react.png" id="react-btn" title="React projects"></img>
                     <img src="img/skills/angular.png" id="angular-btn" title="Angular projects"></img>
                     <img src="img/skills/node.png" id="node-btn" title="NodeJs's APIs projects"></img>
                     
@@ -169,15 +176,15 @@
     
             <!-- CONTACTO -->
             <section id="contact"  class="trans4">
-                <h2>Contacto</h2>
+                <h2 id="contactTitle" class="translatable">Contacto</h2>
                     <form id="form" action="" method="post" >
-                        <label for="name">Nombre Completo</label>
+                        <label for="name" id="formFullName" class="translatable">Nombre Completo</label>
                         <input name="name" type="text" id="name" required>
-                        <label for="email">Correo electrónico</label>
+                        <label for="email" id="formEmail" class="translatable">Correo electrónico</label>
                         <input name="email" type="text" id="email" required>
-                        <label for="message">Mensaje</label>
+                        <label for="message" id="formMessage" class="translatable">Mensaje</label>
                         <textarea id="message" name="message" cols="30" rows="10" required></textarea>
-                        <button type="submit">Enviar mensaje</button>
+                        <button type="submit" id="formSendBtn" class="translatable">Enviar mensaje</button>
                     </form>
                     <a href="mailto:augustosoria@hotmail.es" id="mailto"></a>
             </section>
