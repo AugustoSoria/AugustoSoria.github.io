@@ -28,6 +28,7 @@ h2, h3 {
 
 button {
     font-family: monospace;
+    cursor: pointer;
 }
 
 html {
