@@ -22,7 +22,8 @@ const translations = {
     newsAppDescription: "Aplicación sobre noticias hecha con React y Next, consumiendo la API Newsapi.org.",
     weatherAppDescription: "Aplicación que indica el clima hecha con React, consumiendo la api WeatherApi.",
     toDoAppDescription: "Aplicación To-Do-List responsive hecha con ReactJs.",
-    ssrNewsAppDescription: "Responsivo Server Side Rendering challenge hecho con React, React-Router, Express y Node. En proceso."
+    ssrNewsAppDescription: "Responsivo Server Side Rendering challenge hecho con React, React-Router, Express y Node. En proceso.",
+    resumeAnchor: "cv/Augusto Soria - CV.pdf"
   },
   english: {
     homeLink: "Home",
@@ -47,7 +48,8 @@ const translations = {
     newsAppDescription: "News App made with React and Next, consuming the Newsapi.org API.",
     weatherAppDescription: "React application about the weather that consumes the WeatherApi.",
     toDoAppDescription: "Responsive React To-Do App.",
-    ssrNewsAppDescription: "Responsive Server Side Rendering challenge created with React, React-Router, Express and Node. Still in process."
+    ssrNewsAppDescription: "Responsive Server Side Rendering challenge created with React, React-Router, Express and Node. Still in process.",
+    resumeAnchor: "cv/Augusto Soria - Resume.pdf"
   },
 }
 

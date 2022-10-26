@@ -121,7 +121,10 @@ function projectsAnimations() {
 
 function translate() {
     const translatableElements = document.querySelectorAll(".translatable")
-    translatableElements.forEach(e => e.innerHTML = translations[language][e.id])
+    translatableElements.forEach(e => {
+        if(e.id === "resumeAnchor") {return e.href = translations[language][e.id]}
+        e.innerHTML = translations[language][e.id]
+    })
 }
 
 function changeLanguage(evt) {
