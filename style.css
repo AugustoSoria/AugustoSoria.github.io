@@ -281,39 +281,34 @@ p.arrow {
 }
 
 .portfolio-btns {
-    position: relative;
+    display: flex;
     width: 165px;
-    height: 50px;
+}
+
+.portfolio-btns img {
+    width: 50px;
+    border: 1px solid #eeeeee1f; 
+    border-radius: 50%;
+    padding: 7px;
+    transition: filter 1.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0 5px;
     cursor: pointer;
 }
 
-#react-btn, #angular-btn, #node-btn {
-    width: 50px;
-    filter: hue-rotate(340deg);
-    border: 1px solid #eeeeee1f;
-    border-radius: 50%;
-    padding: 7px;
-    transition: filter 1.3s cubic-bezier(0.4, 0, 0.2, 1);;
-    position: absolute;
-}
-
 #react-btn {
-    left: 0;
+    filter: hue-rotate(340deg);
 }
 
 #angular-btn {
     filter: hue-rotate(197deg);
-    left: 57px;
 }
 
 #node-btn {
     filter: hue-rotate(85deg);
-    padding: 5px;
-    right: 0;
 }
 
-#react-btn:hover, #angular-btn:hover, #node-btn:hover {
-    filter: hue-rotate(360deg);
+.portfolio-btns img:hover {
+    filter: hue-rotate(360deg) !important;
 }
 
 .projects-container {

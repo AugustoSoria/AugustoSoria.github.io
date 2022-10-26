@@ -4,7 +4,7 @@ import { removeModals, openMobileMenu, showProject, openModalProjectsLinks, GSAP
 const menuBtn = document.querySelector('.material-symbols-outlined')
 const translateBtn = document.querySelector("#translateBtn")
 const projectsContainer = document.querySelector('.projects-container')
-const portfolio = document.querySelector('section#portfolio')
+const projectBtns = document.querySelector('div.portfolio-btns')
 const $form = document.querySelector('#form')
 const $inputEmail = document.querySelector('#email')
 const $textarea = document.querySelector('#message')
@@ -22,7 +22,7 @@ $divProjectCardsContainer.classList.add('project-cards-container')
 $divProjectCardsContainer.innerHTML = ReactProjects()
 projectsContainer.appendChild($divProjectCardsContainer);
 
-portfolio.addEventListener('click', (evt) => showProject(evt, $divProjectCardsContainer))
+projectBtns.addEventListener('click', (evt) => showProject(evt, $divProjectCardsContainer))
 
 projectsContainer.addEventListener('click', openModalProjectsLinks)
 
