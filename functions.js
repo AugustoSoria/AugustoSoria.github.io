@@ -7,7 +7,7 @@ const navbarUlContainer = document.querySelector('.navbar-ul-container')
 const modal = portfolio.querySelector(".modal-links")
 const projectsContainer = document.querySelector('.projects-container')
 
-let language;
+let language = "español";
 
 function removeModals(evt) {
     if(evt.target.className == 'navbar-ul-container open' || 
