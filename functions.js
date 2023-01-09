@@ -6,6 +6,7 @@ import translations from './translations.js'
 const navbarUlContainer = document.querySelector('.navbar-ul-container')
 const modal = portfolio.querySelector(".modal-links")
 const projectsContainer = document.querySelector('.projects-container')
+const projectBtnDivs = document.querySelectorAll('div.portfolio-btns div')
 
 let language = "español";
 
@@ -28,22 +29,28 @@ function openMobileMenu(evt) {
 
 function showProject(evt, $div) {
     let btn_ids = ['react-btn', 'angular-btn', 'node-btn']
-    if(btn_ids.indexOf(evt.target.id) == -1) return;
+    if(btn_ids.indexOf(evt.target.parentElement.id) == -1) return;
 
     const filterValues = {
         "react-btn": "hue-rotate(340deg)",
         "angular-btn": "hue-rotate(197deg)",
         "node-btn": "hue-rotate(85deg)"
     }
-    
-    let allProjectsImgBtns = evt.target.parentElement.querySelectorAll('img')
-    allProjectsImgBtns.forEach(img => {
-        img.id === evt.target.id ? img.style.filter = "hue-rotate(360deg)" : img.style.filter = filterValues[img.id]
+
+    projectBtnDivs.forEach(div => {
+        let img = div.firstElementChild
+        if(div.id === evt.target.parentElement.id) {
+            div.classList.remove('noActive')
+            img.style.filter = "hue-rotate(360deg)"
+        } else {
+            div.classList.add('noActive')
+            img.style.filter = filterValues[div.id]
+        }
     })
     
-    if(evt.target.id === btn_ids[0]) $div.innerHTML = ReactProjects()
-    if(evt.target.id === btn_ids[1]) $div.innerHTML = AngularProjects()
-    if(evt.target.id === btn_ids[2]) $div.innerHTML = NodeProjects()
+    if(evt.target.parentElement.id === btn_ids[0]) $div.innerHTML = ReactProjects()
+    if(evt.target.parentElement.id === btn_ids[1]) $div.innerHTML = AngularProjects()
+    if(evt.target.parentElement.id === btn_ids[2]) $div.innerHTML = NodeProjects()
     
     $div.classList.add('show')
     projectsContainer.innerHTML = ""
