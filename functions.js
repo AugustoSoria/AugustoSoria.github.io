@@ -76,11 +76,14 @@ function openModalProjectsLinks(evt) {
     modal.style.left = `${evt.pageX + 15}px`;
     modal.style.top = `${evt.pageY - 54}px`;
 
-    webIcon.href = clickedProjectCard.dataset.linkWeb;
-    gHIcon.href = clickedProjectCard.dataset.linkGithub;
+    clickedProjectCard.dataset.linkWeb ? webIcon.href = clickedProjectCard.dataset.linkWeb : 
+        webIcon.removeAttribute('href');
 
-    /^\/$/.test(clickedProjectCard.dataset.linkWeb) ? webIcon.style.cursor = 'not-allowed' : webIcon.style.cursor = 'pointer';
-    /^\/$/.test(clickedProjectCard.dataset.linkGithub) ? gHIcon.style.cursor = 'not-allowed' : gHIcon.style.cursor = 'pointer';
+    clickedProjectCard.dataset.linkGithub ? gHIcon.href = clickedProjectCard.dataset.linkGithub : 
+        gHIcon.removeAttribute('href');
+
+    /^https:\/\//.test(clickedProjectCard.dataset.linkWeb)? webIcon.style.cursor = 'pointer' : webIcon.style.cursor = 'not-allowed';
+    /^https:\/\//.test(clickedProjectCard.dataset.linkGithub)? gHIcon.style.cursor = 'pointer' : gHIcon.style.cursor = 'not-allowed';
 
     modal.style.opacity = '1';
 }
