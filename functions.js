@@ -19,9 +19,6 @@ const router = {
         this.sections = document.querySelectorAll('.section-content');
         this.navLinks = document.querySelectorAll('.navbar-ul a[href*="#"]');
         
-        console.log('Router init - sections found:', this.sections.length);
-        console.log('Router init - navLinks found:', this.navLinks.length);
-        
         this.setupNavigation();
         this.handleBrowserNavigation();
         this.loadInitialSection();
@@ -33,7 +30,11 @@ const router = {
                 e.preventDefault();
                 const href = link.getAttribute('href');
                 const sectionName = href.replace('#', '') || 'home';
-                console.log('Navigation click:', sectionName);
+                // Si es "inicio", no hacer nada (presentación siempre visible)
+                if (sectionName === 'home' || sectionName === '') {
+                    return;
+                }
+                
                 this.navigateTo(sectionName);
             });
         });
@@ -45,14 +46,12 @@ const router = {
     },
     
     showSection(sectionId) {
-        console.log('Showing section:', sectionId);
         let found = false;
         
         this.sections.forEach(section => {
             if (section.dataset.section === sectionId) {
                 section.classList.add('active');
                 found = true;
-                console.log('Section found and activated:', sectionId);
             } else {
                 section.classList.remove('active');
             }
@@ -60,13 +59,12 @@ const router = {
         
         // Fallback to home if section not found
         if (!found && sectionId !== 'home') {
-            console.log('Section not found, falling back to home');
             this.showSection('home');
         }
     },
     
     updateURL(path) {
-        const url = path === 'home' ? '/' : `/${path}`;
+        const url = path === 'home' ? '/#' : `/#${path}`;
         history.pushState({ section: path }, '', url);
     },
     
@@ -75,12 +73,18 @@ const router = {
             const section = e.state?.section || 'home';
             this.showSection(section);
         });
+        
+        // Escuchar cambios de hash
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash.replace('#', '') || 'about';
+            this.showSection(hash);
+        });
     },
     
     loadInitialSection() {
-        const path = window.location.pathname;
-        const section = path === '/' ? 'home' : path.replace('/', '');
-        console.log('Loading initial section:', section, 'from path:', path);
+        const hash = window.location.hash.replace('#', '') || 'about';
+        const section = hash === 'home' || hash === '' ? 'about' : hash;
+        
         this.showSection(section);
     }
 };
