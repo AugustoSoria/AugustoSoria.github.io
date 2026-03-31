@@ -502,7 +502,21 @@ footer svg:hover {
     position: relative;
 }
 
-/* ----- RESPONSIVE -----  */
+/* ----- SPA SECTION CONTROL ----- */
+
+.section-content {
+    display: none;
+    min-height: calc(100vh - 55px);
+    padding-top: 55px;
+}
+
+.section-content.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----- RESPONSIVE ----- */
 
 @media (max-width: 500px) {
     #responsiveMenu {

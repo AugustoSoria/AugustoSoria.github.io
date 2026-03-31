@@ -46,161 +46,169 @@
     
         <main>
             <!-- PRESENTACION -->
-            <section id="personal-section" class="trans1">
-                <div class="profile-img-container">
-                    <img src="img/perfil.jpeg" alt="perfil-img">
-                </div>
-                <div id="personal-description">
-                    <p class="arrow translatable" id="presentation">Hola! Soy un Full-Stack Developer de Mendoza, Argentina. Este es mi web personal. Bienvenidos!</p>
-                </div>
-            </section>
+            <div class="section-content active" data-section="home">
+                <section id="personal-section" class="trans1">
+                    <div class="profile-img-container">
+                        <img src="img/perfil.jpeg" alt="perfil-img">
+                    </div>
+                    <div id="personal-description">
+                        <p class="arrow translatable" id="presentation">Hola! Soy un Full-Stack Developer de Mendoza, Argentina. Este es mi web personal. Bienvenidos!</p>
+                    </div>
+                </section>
+            </div>
     
             <!-- SOBRE MI -->
-            <section id="about" class="trans2">
-                <div>
-                    <h2 class="translatable" id="aboutMeTitle">Sobre mí</h2>
-                    <p class="translatable" id="aboutMe">Disfruto mucho construyendo webs, tanto de la sensación de realización cuando se termina un proyecto y es funcional, como del proceso de debbugear y "rabear" porque las cosas no salen como uno espera. Tengo experiencia tanto del lado Front-end como Back-end, no sabría cuál de los dos lados elegir porque disfruto de ambos y quiero aprender mucho tanto de uno como del otro, sé que es un largo camino pero disfruto del recorrido.</p>
-                    <a href="cv\Augusto_Soria_CV.pdf" id="resumeAnchor" class="translatable" target="_blank">
-                        <button type="button" id="cvBtn" class="translatable">
-                            Ver Currículum
-                        </button>
-                    </a>
-                </div>
-                <div id="skill-container">
-                    <h3 class="translatable" id="technologies">Tecnologias</h3>
-                    <div id="skill-card-container">
-                        <div class="skill-card html-card">
-                            <img src="./img/skills/html5.png" alt="">
-                            <h5>HTML</h5>
-                        </div>
-                        <div class="skill-card css-card">
-                            <img src="./img/skills/css.png" alt="">
-                            <h5>CSS</h5>
-                        </div>
-                        <div class="skill-card js-card">
-                            <img src="./img/skills/javascript.png" alt="">
-                            <h5>JavaScript</h5>
-                        </div>
-                        <div class="skill-card react-card">
-                            <img src="./img/skills/react.png" alt="">
-                            <h5>React</h5>
-                        </div>
-                        <div class="skill-card redux-card">
-                            <img src="./img/skills/redux.png" alt="">
-                            <h5>Redux</h5>
-                        </div>
-                        <div class="skill-card angular-card">
-                            <img src="./img/skills/angular.png" alt="">
-                            <h5>Angular</h5>
-                        </div>
-                        <div class="skill-card rxjs-card">
-                            <img src="img/skills/rxjs.png" alt="">
-                            <h5>RxJs</h5>
-                        </div>
-                        <div class="skill-card ngrx-card">
-                            <img src="img/skills/ngrx.png" alt="">
-                            <h5>NgRx</h5>
-                        </div>
-                        <div class="skill-card ts-card">
-                            <img src="img/skills/ts.png" alt="">
-                            <h5>TypeScript</h5>
-                        </div>
-                        <div class="skill-card node-card">
-                            <img src="./img/skills/node.png" alt="">
-                            <h5>Node.js</h5>
-                        </div>
-                        <div class="skill-card exps-card">
-                            <img src="./img/skills/express.png" alt="">
-                            <h5>Express</h5>
-                        </div>
-                        <div class="skill-card mocha-chai-card">
-                            <img src="./img/skills/mocha-chai.png" alt="">
-                            <h5>Mocha-Chai</h5>
-                        </div>
-                        <div class="skill-card mocha-chai-card">
-                            <img src="./img/skills/java.png" alt="">
-                            <h5>Java</h5>
-                        </div>
-                        <div class="skill-card btp-card">
-                            <img src="./img/skills/spring.png" alt="">
-                            <h5>Spring</h5>
-                        </div>
-                        <div class="skill-card mongo-card">
-                            <img src="./img/skills/mongodb.png" alt="">
-                            <h5>MongoDB</h5>
-                        </div>
-                        <div class="skill-card mongo-card">
-                            <img src="./img/skills/mongoose-js.png" alt="">
-                            <h5>Mongoose</h5>
-                        </div>
-                        <div class="skill-card sql-card">
-                            <img src="img/skills/mysql.png" alt="">
-                            <h5>MySQL</h5>
-                        </div>
-                        <div class="skill-card git-card">
-                            <img src="./img/skills/git.png" alt="">
-                            <h5>Git</h5>
-                        </div>
-                        <div class="skill-card git-card">
-                            <img src="./img/skills/docker.png" alt="">
-                            <h5>Docker</h5>
-                        </div>
-                        <div class="skill-card git-card">
-                            <img src="./img/skills/GCP.png" alt="">
-                            <h5>GCP</h5>
+            <div class="section-content" data-section="about">
+                <section id="about" class="trans2">
+                    <div>
+                        <h2 class="translatable" id="aboutMeTitle">Sobre mí</h2>
+                        <p class="translatable" id="aboutMe">Disfruto mucho construyendo webs, tanto de la sensación de realización cuando se termina un proyecto y es funcional, como del proceso de debbugear y "rabear" porque las cosas no salen como uno espera. Tengo experiencia tanto del lado Front-end como Back-end, no sabría cuál de los dos lados elegir porque disfruto de ambos y quiero aprender mucho tanto de uno como del otro, sé que es un largo camino pero disfruto del recorrido.</p>
+                        <a href="cv\Augusto_Soria_CV.pdf" id="resumeAnchor" class="translatable" target="_blank">
+                            <button type="button" id="cvBtn" class="translatable">
+                                Ver Currículum
+                            </button>
+                        </a>
+                    </div>
+                    <div id="skill-container">
+                        <h3 class="translatable" id="technologies">Tecnologias</h3>
+                        <div id="skill-card-container">
+                            <div class="skill-card html-card">
+                                <img src="./img/skills/html5.png" alt="">
+                                <h5>HTML</h5>
+                            </div>
+                            <div class="skill-card css-card">
+                                <img src="./img/skills/css.png" alt="">
+                                <h5>CSS</h5>
+                            </div>
+                            <div class="skill-card js-card">
+                                <img src="./img/skills/javascript.png" alt="">
+                                <h5>JavaScript</h5>
+                            </div>
+                            <div class="skill-card react-card">
+                                <img src="./img/skills/react.png" alt="">
+                                <h5>React</h5>
+                            </div>
+                            <div class="skill-card redux-card">
+                                <img src="./img/skills/redux.png" alt="">
+                                <h5>Redux</h5>
+                            </div>
+                            <div class="skill-card angular-card">
+                                <img src="./img/skills/angular.png" alt="">
+                                <h5>Angular</h5>
+                            </div>
+                            <div class="skill-card rxjs-card">
+                                <img src="img/skills/rxjs.png" alt="">
+                                <h5>RxJs</h5>
+                            </div>
+                            <div class="skill-card ngrx-card">
+                                <img src="img/skills/ngrx.png" alt="">
+                                <h5>NgRx</h5>
+                            </div>
+                            <div class="skill-card ts-card">
+                                <img src="img/skills/ts.png" alt="">
+                                <h5>TypeScript</h5>
+                            </div>
+                            <div class="skill-card node-card">
+                                <img src="./img/skills/node.png" alt="">
+                                <h5>Node.js</h5>
+                            </div>
+                            <div class="skill-card exps-card">
+                                <img src="./img/skills/express.png" alt="">
+                                <h5>Express</h5>
+                            </div>
+                            <div class="skill-card mocha-chai-card">
+                                <img src="./img/skills/mocha-chai.png" alt="">
+                                <h5>Mocha-Chai</h5>
+                            </div>
+                            <div class="skill-card mocha-chai-card">
+                                <img src="./img/skills/java.png" alt="">
+                                <h5>Java</h5>
+                            </div>
+                            <div class="skill-card btp-card">
+                                <img src="./img/skills/spring.png" alt="">
+                                <h5>Spring</h5>
+                            </div>
+                            <div class="skill-card mongo-card">
+                                <img src="./img/skills/mongodb.png" alt="">
+                                <h5>MongoDB</h5>
+                            </div>
+                            <div class="skill-card mongo-card">
+                                <img src="./img/skills/mongoose-js.png" alt="">
+                                <h5>Mongoose</h5>
+                            </div>
+                            <div class="skill-card sql-card">
+                                <img src="img/skills/mysql.png" alt="">
+                                <h5>MySQL</h5>
+                            </div>
+                            <div class="skill-card git-card">
+                                <img src="./img/skills/git.png" alt="">
+                                <h5>Git</h5>
+                            </div>
+                            <div class="skill-card git-card">
+                                <img src="./img/skills/docker.png" alt="">
+                                <h5>Docker</h5>
+                            </div>
+                            <div class="skill-card git-card">
+                                <img src="./img/skills/GCP.png" alt="">
+                                <h5>GCP</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
     
             <!-- PORTFOLIO -->
-            <section id="portfolio" class="trans3">
-                <h2>Portfolio</h2>
-                <div class="portfolio-btns">
-                    <div id="react-btn">
-                        <img src="img/skills/react.png" title="React projects" />
+            <div class="section-content" data-section="portfolio">
+                <section id="portfolio" class="trans3">
+                    <h2>Portfolio</h2>
+                    <div class="portfolio-btns">
+                        <div id="react-btn">
+                            <img src="img/skills/react.png" title="React projects" />
+                        </div>
+                        <div  id="angular-btn" class="noActive">
+                            <img src="img/skills/angular.png" title="Angular projects" />
+                        </div>
+                        <div id="node-btn" class="noActive">
+                            <img src="img/skills/node.png" title="NodeJs's APIs projects" />
+                        </div>
+                        
+                        
+                        
+                        
                     </div>
-                    <div  id="angular-btn" class="noActive">
-                        <img src="img/skills/angular.png" title="Angular projects" />
+                    <div class="modal-links">
+                        <a href="" target="_blank" title="web deploy">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="color: var(--font);" width="30" height="30" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/AugustoSoria" target="_blank" title="github repositorio">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="color: var(--font);" width="30" height="30" fill="currentColor" class="bi bi-github mx-2" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                            </svg>
+                        </a>
                     </div>
-                    <div id="node-btn" class="noActive">
-                        <img src="img/skills/node.png" title="NodeJs's APIs projects" />
+                    <div class="projects-container">
                     </div>
-                    
-                    
-                    
-                    
-                </div>
-                <div class="modal-links">
-                    <a href="" target="_blank" title="web deploy">
-                        <svg xmlns="http://www.w3.org/2000/svg" style="color: var(--font);" width="30" height="30" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                        </svg>
-                    </a>
-                    <a href="https://github.com/AugustoSoria" target="_blank" title="github repositorio">
-                        <svg xmlns="http://www.w3.org/2000/svg" style="color: var(--font);" width="30" height="30" fill="currentColor" class="bi bi-github mx-2" viewBox="0 0 16 16">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="projects-container">
-                </div>
-            </section>
+                </section>
+            </div>
     
             <!-- CONTACTO -->
-            <section id="contact"  class="trans4">
-                <h2 id="contactTitle" class="translatable">Contacto</h2>
-                    <form id="form" action="" method="post" >
-                        <label for="name" id="formFullName" class="translatable">Nombre Completo</label>
-                        <input name="name" type="text" id="name" required>
-                        <label for="email" id="formEmail" class="translatable">Correo electrónico</label>
-                        <input name="email" type="text" id="email" required>
-                        <label for="message" id="formMessage" class="translatable">Mensaje</label>
-                        <textarea id="message" name="message" cols="30" rows="10" required></textarea>
-                        <button type="submit" id="formSendBtn" class="translatable">Enviar mensaje</button>
-                    </form>
-                    <a href="mailto:augustosoria@hotmail.es" id="mailto"></a>
-            </section>
+            <div class="section-content" data-section="contact">
+                <section id="contact"  class="trans4">
+                    <h2 id="contactTitle" class="translatable">Contacto</h2>
+                        <form id="form" action="" method="post" >
+                            <label for="name" id="formFullName" class="translatable">Nombre Completo</label>
+                            <input name="name" type="text" id="name" required>
+                            <label for="email" id="formEmail" class="translatable">Correo electrónico</label>
+                            <input name="email" type="text" id="email" required>
+                            <label for="message" id="formMessage" class="translatable">Mensaje</label>
+                            <textarea id="message" name="message" cols="30" rows="10" required></textarea>
+                            <button type="submit" id="formSendBtn" class="translatable">Enviar mensaje</button>
+                        </form>
+                        <a href="mailto:augustosoria@hotmail.es" id="mailto"></a>
+                </section>
+            </div>
         </main>
     
         <footer>

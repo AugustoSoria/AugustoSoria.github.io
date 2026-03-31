@@ -1,5 +1,5 @@
 import { ReactProjects } from './projects/React-projects.js'
-import { removeModals, openMobileMenu, showProject, openModalProjectsLinks, GSAPAnimations, changeLanguage } from './functions.js'
+import { removeModals, openMobileMenu, showProject, openModalProjectsLinks, GSAPAnimations, changeLanguage, router } from './functions.js'
 
 const menuBtn = document.querySelector('.material-symbols-outlined')
 const translateBtn = document.querySelector("#translateBtn")

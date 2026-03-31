@@ -10,6 +10,81 @@ const projectBtnDivs = document.querySelectorAll('div.portfolio-btns div')
 
 let language = "español";
 
+// SPA Router System - Simple approach
+const router = {
+    sections: null,
+    navLinks: null,
+    
+    init() {
+        this.sections = document.querySelectorAll('.section-content');
+        this.navLinks = document.querySelectorAll('.navbar-ul a[href*="#"]');
+        
+        console.log('Router init - sections found:', this.sections.length);
+        console.log('Router init - navLinks found:', this.navLinks.length);
+        
+        this.setupNavigation();
+        this.handleBrowserNavigation();
+        this.loadInitialSection();
+    },
+    
+    setupNavigation() {
+        this.navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const href = link.getAttribute('href');
+                const sectionName = href.replace('#', '') || 'home';
+                console.log('Navigation click:', sectionName);
+                this.navigateTo(sectionName);
+            });
+        });
+    },
+    
+    navigateTo(sectionName) {
+        this.showSection(sectionName);
+        this.updateURL(sectionName);
+    },
+    
+    showSection(sectionId) {
+        console.log('Showing section:', sectionId);
+        let found = false;
+        
+        this.sections.forEach(section => {
+            if (section.dataset.section === sectionId) {
+                section.classList.add('active');
+                found = true;
+                console.log('Section found and activated:', sectionId);
+            } else {
+                section.classList.remove('active');
+            }
+        });
+        
+        // Fallback to home if section not found
+        if (!found && sectionId !== 'home') {
+            console.log('Section not found, falling back to home');
+            this.showSection('home');
+        }
+    },
+    
+    updateURL(path) {
+        const url = path === 'home' ? '/' : `/${path}`;
+        history.pushState({ section: path }, '', url);
+    },
+    
+    handleBrowserNavigation() {
+        window.addEventListener('popstate', (e) => {
+            const section = e.state?.section || 'home';
+            this.showSection(section);
+        });
+    },
+    
+    loadInitialSection() {
+        const path = window.location.pathname;
+        const section = path === '/' ? 'home' : path.replace('/', '');
+        console.log('Loading initial section:', section, 'from path:', path);
+        this.showSection(section);
+    }
+};
+
 function removeModals(evt) {
     if(evt.target.className == 'navbar-ul-container open' || 
         evt.target.children[0]?.className == "border-effect") return;
@@ -153,6 +228,9 @@ function changeLanguage(evt) {
     translate()
 }
 
+// Initialize router when DOM is ready
+router.init();
+
 export {
     removeModals,
     openMobileMenu,
@@ -160,5 +238,6 @@ export {
     openModalProjectsLinks,
     GSAPAnimations,
     translate,
-    changeLanguage
+    changeLanguage,
+    router
 }
