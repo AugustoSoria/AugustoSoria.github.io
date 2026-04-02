@@ -45,19 +45,8 @@
         </nav>
     
         <div class="split-container">
-            <!-- COLUMNA IZQUIERDA - PRESENTACIÓN FIJA -->
-            <div class="left-column">
-                <section id="personal-section" class="trans1">
-                    <div class="profile-img-container">
-                        <img src="img/perfil.jpeg" alt="perfil-img">
-                    </div>
-                    <div id="personal-description">
-                        <p class="arrow translatable" id="presentation">Hola! Soy un Full-Stack Developer de Mendoza, Argentina. Este es mi web personal. Bienvenidos!</p>
-                    </div>
-                </section>
-            </div>
     
-            <!-- COLUMNA DERECHA - SECCIONES NAVEGABLES -->
+            <!-- COLUMNA IZQUIERDA - SECCIONES NAVEGABLES -->
             <div class="right-column">
                 <!-- SOBRE MI -->
                 <div class="section-content active" data-section="about">
@@ -212,6 +201,26 @@
                     </section>
                 </div>
             </div>
+
+            <!-- COLUMNA DERECHA - PRESENTACIÓN FIJA -->
+            <div class="left-column">
+                <!-- <section id="personal-section" class="trans1">
+                    <div class="profile-img-container">
+                        <img src="img/perfil.jpeg" alt="perfil-img">
+                    </div>
+                    <div id="personal-description">
+                        <p class="arrow translatable" id="presentation">Hola! Soy un Full-Stack Developer de Mendoza, Argentina. Este es mi web personal. Bienvenidos!</p>
+                    </div>
+                </section> -->
+                
+                <!-- Opción 2: Video para mejor calidad (con autoplay silencioso) -->
+                <div>
+                    <video id="medusa" autoplay loop muted playsinline  style="width: 100%">
+                        <!-- <source src="jellyfish_animation_6.mp4" type="video/mp4"> -->
+                        <source src="medusa.webm" type="video/webm">
+                    </video>
+                </div>
+            </div>
         </div>
     
         <footer>
@@ -228,6 +237,7 @@
         </footer>
     </div>
 
+    <script src="speed-control.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script type="module" src="./functions.js"></script>
