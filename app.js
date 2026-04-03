@@ -1,7 +1,6 @@
 import { ReactProjects } from './projects/React-projects.js'
-import { removeModals, openMobileMenu, showProject, openModalProjectsLinks, GSAPAnimations, changeLanguage } from './functions.js'
+import { removeModals, showProject, openModalProjectsLinks, changeLanguage, router } from './functions.js'
 
-const menuBtn = document.querySelector('.material-symbols-outlined')
 const translateBtn = document.querySelector("#translateBtn")
 const projectsContainer = document.querySelector('.projects-container')
 const projectBtns = document.querySelector('div.portfolio-btns')
@@ -13,7 +12,6 @@ const mailto = document.querySelector('#mailto')
 document.documentElement.addEventListener('click', removeModals)
 
 // -------------------------------- navbar -------------------------------- 
-menuBtn.addEventListener('click', openMobileMenu)
 translateBtn.addEventListener('click', changeLanguage)
 
 // -------------------------------- projects section --------------------------------
@@ -26,8 +24,8 @@ projectBtns.addEventListener('click', (evt) => showProject(evt, $divProjectCards
 
 projectsContainer.addEventListener('click', openModalProjectsLinks)
 
-// -------------------------------- GSAP animations --------------------------------
-GSAPAnimations()
+// -------------------------------- CSS animations --------------------------------
+// GSAP eliminado - las animaciones ahora usan CSS
 
 // -------------------------------- E-mail contact --------------------------------
 $form.addEventListener('submit', (e) => {

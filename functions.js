@@ -10,6 +10,85 @@ const projectBtnDivs = document.querySelectorAll('div.portfolio-btns div')
 
 let language = "español";
 
+// SPA Router System - Simple approach
+const router = {
+    sections: null,
+    navLinks: null,
+    
+    init() {
+        this.sections = document.querySelectorAll('.section-content');
+        this.navLinks = document.querySelectorAll('.navbar-ul a[href*="#"]');
+        
+        this.setupNavigation();
+        this.handleBrowserNavigation();
+        this.loadInitialSection();
+    },
+    
+    setupNavigation() {
+        this.navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const href = link.getAttribute('href');
+                const sectionName = href.replace('#', '') || 'home';
+                // Si es "inicio", no hacer nada (presentación siempre visible)
+                if (sectionName === 'home' || sectionName === '') {
+                    return;
+                }
+                
+                this.navigateTo(sectionName);
+            });
+        });
+    },
+    
+    navigateTo(sectionName) {
+        this.showSection(sectionName);
+        this.updateURL(sectionName);
+    },
+    
+    showSection(sectionId) {
+        let found = false;
+        
+        this.sections.forEach(section => {
+            if (section.dataset.section === sectionId) {
+                section.classList.add('active');
+                found = true;
+            } else {
+                section.classList.remove('active');
+            }
+        });
+        
+        // Fallback to home if section not found
+        if (!found && sectionId !== 'home') {
+            this.showSection('home');
+        }
+    },
+    
+    updateURL(path) {
+        const url = path === 'home' ? '/#' : `/#${path}`;
+        history.pushState({ section: path }, '', url);
+    },
+    
+    handleBrowserNavigation() {
+        window.addEventListener('popstate', (e) => {
+            const section = e.state?.section || 'home';
+            this.showSection(section);
+        });
+        
+        // Escuchar cambios de hash
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash.replace('#', '') || 'about';
+            this.showSection(hash);
+        });
+    },
+    
+    loadInitialSection() {
+        const hash = window.location.hash.replace('#', '') || 'about';
+        const section = hash === 'home' || hash === '' ? 'about' : hash;
+        
+        this.showSection(section);
+    }
+};
+
 function removeModals(evt) {
     if(evt.target.className == 'navbar-ul-container open' || 
         evt.target.children[0]?.className == "border-effect") return;
@@ -19,12 +98,6 @@ function removeModals(evt) {
 
     modal.style.opacity = '0';
     modal.style.left = `-300%`
-}
-
-function openMobileMenu(evt) {
-    navbarUlContainer.classList.toggle('open');
-    document.documentElement.classList.toggle('block-scroll')
-    evt.stopPropagation()
 }
 
 function showProject(evt, $div) {
@@ -89,55 +162,13 @@ function openModalProjectsLinks(evt) {
 }
 
 function GSAPAnimations() {
-    gsap.to('.trans1', {
-        duration: 2.5,
-        delay: 0.5,
-        opacity: 1
-    })
-    
-    gsap.registerPlugin(ScrollTrigger)
-    
-    gsap.to('.trans2', {
-        scrollTrigger: {
-            trigger: '.trans2',
-            start: 'top 400px',
-            end: '200px 300px'
-        },
-        duration: 1, opacity: 1
-    })
-    
-    gsap.to('.trans3', {
-        scrollTrigger: {
-            trigger: '.trans2',
-            start: '600px 400px',
-            end: '700px 300px'
-        },
-        duration: 1, opacity: 1
-    })
-    
-    projectsAnimations()
-    
-    gsap.to('.trans4', {
-        scrollTrigger: {
-            trigger: '.trans2',
-            start: '1100px 400px',
-            end: '1200px 300px'
-        },
-        duration: 1, opacity: 1
-    })
+    // GSAP eliminado - las animaciones ahora usan CSS
+    // Los elementos .trans2, .trans3, .trans4 ya tienen opacity: 1 por CSS
 }
 
 function projectsAnimations() {
-    return (
-        gsap.to('.projects-container div.project-card', {
-            scrollTrigger: {
-                trigger: '.trans2',
-                start: '630px 400px',
-                end: '700px 300px'
-            },
-            duration: 1, opacity: 1, y:30
-        })
-    )
+    // GSAP eliminado - las project cards ahora usan CSS
+    // Los elementos .project-card ya tienen opacity: 1 por CSS
 }
 
 function translate() {
@@ -153,12 +184,14 @@ function changeLanguage(evt) {
     translate()
 }
 
+// Initialize router when DOM is ready
+router.init();
+
 export {
     removeModals,
-    openMobileMenu,
     showProject,
     openModalProjectsLinks,
-    GSAPAnimations,
     translate,
-    changeLanguage
+    changeLanguage,
+    router
 }
