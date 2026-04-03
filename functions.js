@@ -100,12 +100,6 @@ function removeModals(evt) {
     modal.style.left = `-300%`
 }
 
-function openMobileMenu(evt) {
-    navbarUlContainer.classList.toggle('open');
-    document.documentElement.classList.toggle('block-scroll')
-    evt.stopPropagation()
-}
-
 function showProject(evt, $div) {
     let btn_ids = ['react-btn', 'angular-btn', 'node-btn']
     if(btn_ids.indexOf(evt.target.parentElement.id) == -1) return;
@@ -168,55 +162,13 @@ function openModalProjectsLinks(evt) {
 }
 
 function GSAPAnimations() {
-    gsap.to('.trans1', {
-        duration: 2.5,
-        delay: 0.5,
-        opacity: 1
-    })
-    
-    gsap.registerPlugin(ScrollTrigger)
-    
-    gsap.to('.trans2', {
-        scrollTrigger: {
-            trigger: '.trans2',
-            start: 'top 400px',
-            end: '200px 300px'
-        },
-        duration: 1, opacity: 1
-    })
-    
-    gsap.to('.trans3', {
-        scrollTrigger: {
-            trigger: '.trans2',
-            start: '600px 400px',
-            end: '700px 300px'
-        },
-        duration: 1, opacity: 1
-    })
-    
-    projectsAnimations()
-    
-    gsap.to('.trans4', {
-        scrollTrigger: {
-            trigger: '.trans2',
-            start: '1100px 400px',
-            end: '1200px 300px'
-        },
-        duration: 1, opacity: 1
-    })
+    // GSAP eliminado - las animaciones ahora usan CSS
+    // Los elementos .trans2, .trans3, .trans4 ya tienen opacity: 1 por CSS
 }
 
 function projectsAnimations() {
-    return (
-        gsap.to('.projects-container div.project-card', {
-            scrollTrigger: {
-                trigger: '.trans2',
-                start: '630px 400px',
-                end: '700px 300px'
-            },
-            duration: 1, opacity: 1, y:30
-        })
-    )
+    // GSAP eliminado - las project cards ahora usan CSS
+    // Los elementos .project-card ya tienen opacity: 1 por CSS
 }
 
 function translate() {
@@ -237,10 +189,8 @@ router.init();
 
 export {
     removeModals,
-    openMobileMenu,
     showProject,
     openModalProjectsLinks,
-    GSAPAnimations,
     translate,
     changeLanguage,
     router
