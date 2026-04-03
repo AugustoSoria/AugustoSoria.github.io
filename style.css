@@ -595,6 +595,7 @@ footer svg:hover {
 /* ----- MEDUSA GLOW EFFECT ----- */
 
 #medusa {
+    opacity: 0.8;
     filter: 
         drop-shadow(0 0 8px rgba(100, 200, 255, 0.3))
         drop-shadow(0 0 15px rgba(50, 150, 255, 0.2))
