@@ -317,6 +317,9 @@ p.arrow {
 }
 
 /* ----- SOBRE MI -----  */
+#about {
+    padding: 0 1em;
+}
 
 #about div:first-of-type{
     max-width: 600px;
@@ -324,7 +327,6 @@ p.arrow {
 
 #about p {
     font-size: large;
-    padding: 0 1em;
 }
 
 #cvBtn {
