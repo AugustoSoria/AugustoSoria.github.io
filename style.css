@@ -149,7 +149,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: end;
     align-items: center;
-    backdrop-filter: blur(15px);
+    /* backdrop-filter: blur(15px); */
     /* box-shadow: -10px -5px 15px var(--prominent); */
     height: 55px;
     /* position: fixed; */
@@ -667,7 +667,7 @@ footer svg:hover {
     /* Eliminar animaciones de fondo en móvil */
     body {
         animation: none !important;
-        background: var(--background-body) !important;
+        /* background: var(--background-body) !important; */
         overflow: auto;
     }
     
@@ -702,8 +702,8 @@ footer svg:hover {
         min-height: 93vh;
         /* min-height: 100vh; */
         position: relative;
-        background: rgba(34, 40, 49, 0);
-        backdrop-filter: blur(1px);
+        /* background: rgba(34, 40, 49, 0); */
+        /* backdrop-filter: blur(1px); */
     }
     
     /* Navbar adaptada */
@@ -711,7 +711,7 @@ footer svg:hover {
         position: fixed;
         top: 0;
         background: rgb(34 40 49 / 79%);
-        backdrop-filter: blur(10px);
+        /* backdrop-filter: blur(10px); */
         z-index: 10;
         padding: 0 1em;
     }
