@@ -1,5 +1,5 @@
 import { ReactProjects } from './projects/React-projects.js'
-import { removeModals, showProject, openModalProjectsLinks, changeLanguage, router } from './functions.js'
+import { removeModals, showProject, openModalProjectsLinks, changeLanguage, router, initializeCarousel } from './functions.js'
 
 const translateBtn = document.querySelector("#translateBtn")
 const projectsContainer = document.querySelector('.projects-container')
@@ -23,6 +23,11 @@ projectsContainer.appendChild($divProjectCardsContainer);
 projectBtns.addEventListener('click', (evt) => showProject(evt, $divProjectCardsContainer))
 
 projectsContainer.addEventListener('click', openModalProjectsLinks)
+
+// Initialize carousel after projects are loaded
+setTimeout(() => {
+    initializeCarousel()
+}, 100)
 
 // -------------------------------- CSS animations --------------------------------
 // GSAP eliminado - las animaciones ahora usan CSS

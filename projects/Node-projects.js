@@ -22,26 +22,24 @@ export function NodeProjects() {
                 </div>
                 <p class="card-text translatable" id="trackerDescription">NodeJS API para crear usuarios, tareas y guardar esto en Mongo Atlas, usa MongooseJs como modelador de datos.</p>
             </div>
+        </div>
+        <div class="project-card news-card" data-link-web="https://metric-imperial-converter-847.herokuapp.com/" data-link-gitHub="https://github.com/AugustoSoria/Metric-Imperial-Converter">
+            <img src="img/projects/metric-imperial-converter.png" class="card-img-top" alt="personal-library project">
+            <div class="card-body">
+                <div class="tech-img-container">
+                    <img style="width: 30px;" src="img/skills/node.png"/>
+                </div>
+                <p class="card-text translatable" id="converterDescription">NodeJS API para convertir unidades imperiales al sistema métrico internacional y viceversa.</p>
+            </div>
+        </div>
+        <div class="project-card news-card" data-link-web="https://timestamp-microservice-847.herokuapp.com/" data-link-gitHub="https://github.com/AugustoSoria/fcc-timestamp-microservice">
+            <img src="img/projects/timestamp-microservice.png" class="card-img-top" alt="personal-library project">
+            <div class="card-body">
+                <div class="tech-img-container">
+                    <img style="width: 30px;" src="img/skills/node.png"/>
+                </div>
+                <p class="card-text translatable" id="timestampDescription">NodeJS API para convertir una fecha a unix time stamp y viceversa.</p>
+            </div>
         </div>`
     )
 }
-
-
-// <div class="project-card news-card" data-link-web="https://metric-imperial-converter-847.herokuapp.com/" data-link-gitHub="https://github.com/AugustoSoria/Metric-Imperial-Converter">
-//     <img src="img/projects/metric-imperial-converter.png" class="card-img-top" alt="personal-library project">
-//     <div class="card-body">
-//         <div class="tech-img-container">
-//             <img style="width: 30px;" src="img/skills/node.png"/>
-//         </div>
-//         <p class="card-text translatable" id="converterDescription">NodeJS API para convertir unidades imperiales al sistema métrico internacional y viceversa.</p>
-//     </div>
-// </div>
-// <div class="project-card news-card" data-link-web="https://timestamp-microservice-847.herokuapp.com/" data-link-gitHub="https://github.com/AugustoSoria/fcc-timestamp-microservice">
-//     <img src="img/projects/timestamp-microservice.png" class="card-img-top" alt="personal-library project">
-//     <div class="card-body">
-//         <div class="tech-img-container">
-//             <img style="width: 30px;" src="img/skills/node.png"/>
-//         </div>
-//         <p class="card-text translatable" id="timestampDescription">NodeJS API para convertir una fecha a unix time stamp y viceversa.</p>
-//     </div>
-// </div>

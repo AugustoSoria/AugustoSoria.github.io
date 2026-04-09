@@ -484,11 +484,21 @@ p.arrow {
 
 .project-cards-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    /* max-width: 650px; */
-    /* min-height: 472px; */
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 1em;
+    padding: 0 2em;
+    max-width: calc(222px * 1.5 + 1em + 4em);
+    margin: 0 auto;
     opacity: 1 !important;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.project-cards-container::-webkit-scrollbar {
+    display: none;
 }
 
 .project-cards-container.show {
@@ -506,7 +516,9 @@ p.arrow {
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid var(--prominent);
-    margin: 2em 1em;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    margin: 2em 0;
 }
 
 img.card-img-top {
@@ -535,7 +547,38 @@ img.card-img-top {
     text-align: center;
 }
 
-/* ----- CONTACTO -----  */
+/* Carousel Dot Indicators */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    margin-top: 1em;
+    padding: 1em 0;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--font);
+    opacity: 0.4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid var(--prominent);
+}
+
+.carousel-dot.active {
+    opacity: 1;
+    background-color: var(--prominent);
+    transform: scale(1.2);
+}
+
+.carousel-dot:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+/* ----- CONTACTO ----- */
 
 #contact h2{ 
     margin-bottom: 2em;
@@ -667,8 +710,6 @@ footer svg:hover {
     /* Eliminar animaciones de fondo en móvil */
     body {
         animation: none !important;
-        /* background: var(--background-body) !important; */
-        overflow: auto;
     }
     
     /* Video como fondo */
@@ -699,7 +740,7 @@ footer svg:hover {
     
     .right-column {
         width: 100%;
-        min-height: 93vh;
+        min-height: 95vh;
         /* min-height: 100vh; */
         position: relative;
         /* background: rgba(34, 40, 49, 0); */
@@ -772,7 +813,22 @@ footer svg:hover {
         width: 100%;
         /* height: auto; */
     }
-
+    
+    /* Carousel mobile adjustments */
+    .project-cards-container {
+        max-width: 100%;
+        padding: 0 1em;
+    }
+    
+    .carousel-dots {
+        padding: 0.5em 0;
+    }
+    
+    .carousel-dot {
+        width: 10px;
+        height: 10px;
+    }
+    
     .bubble-small {
         z-index: 0;
     }
