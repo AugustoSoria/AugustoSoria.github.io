@@ -151,7 +151,7 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     /* backdrop-filter: blur(15px); */
     /* box-shadow: -10px -5px 15px var(--prominent); */
-    height: 55px;
+    height: 40px;
     /* position: fixed; */
     width: 100%;
     z-index: 5;
@@ -219,7 +219,7 @@ body::-webkit-scrollbar-thumb {
 .split-container {
     display: flex;
     width: 100%;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 63px);
     /* margin-top: 55px; */
 }
 
@@ -364,17 +364,13 @@ p.arrow {
 
 /* ----- PORTFOLIO -----  */
 
-#portfolio {
-    margin: 2em 0;
-}
-
 /* #portfolio h2:first-of-type {
     margin-bottom: 2em;
 } */
 
 .portfolio-btns {
     display: flex;
-    width: 165px;
+    /* width: 165px; */
 }
 
 .portfolio-btns div {
@@ -620,7 +616,7 @@ button[type=submit] {
 
 footer {
     text-align: center;
-    margin: 3em 0 0.5em 0;
+    /* margin: 3em 0 0.5em 0; */
     position: relative;
     z-index: 2;
 }

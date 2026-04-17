@@ -24,6 +24,7 @@ const translations = {
     toDoAppDescription: "Aplicación To-Do-List responsive hecha con ReactJs.",
     ssrNewsAppDescription: "Responsivo Server Side Rendering challenge hecho con React, React-Router, Express y Node. From scratch.",
     jpaEcommerceDescription: "E-Commerce el cual hace uso de las especificaciones de JPA para el filtrado de datos.",
+    cineearsDescription: "Aplicación construida con Next.js 14, Server-Side Rendering y API Routes para la practica de la escucha del inglés.",
     resumeAnchor: "cv/Augusto_Soria_CV.pdf"
   },
   english: {
@@ -51,6 +52,7 @@ const translations = {
     toDoAppDescription: "Responsive React To-Do App.",
     ssrNewsAppDescription: "Responsive Server Side Rendering challenge created with React, React-Router, Express and Node. From scratch.",
     jpaEcommerceDescription: "E-Commerce which make use of JPA specification for data filtering.",
+    cineearsDescription: "App built with Next.js 14, Server-Side Rendering and API Routes for practicing English listening.",
     resumeAnchor: "cv/Augusto_Soria_Resume.pdf"
   },
 }

@@ -1,4 +1,4 @@
-import { ReactProjects } from './projects/React-projects.js'
+import { NextProjects } from './projects/Next-projects.js'
 import { removeModals, showProject, openModalProjectsLinks, changeLanguage, router, initializeCarousel } from './functions.js'
 
 const translateBtn = document.querySelector("#translateBtn")
@@ -17,7 +17,7 @@ translateBtn.addEventListener('click', changeLanguage)
 // -------------------------------- projects section --------------------------------
 let $divProjectCardsContainer = document.createElement("div")
 $divProjectCardsContainer.classList.add('project-cards-container')
-$divProjectCardsContainer.innerHTML = ReactProjects()
+$divProjectCardsContainer.innerHTML = NextProjects()
 projectsContainer.appendChild($divProjectCardsContainer);
 
 projectBtns.addEventListener('click', (evt) => showProject(evt, $divProjectCardsContainer))
