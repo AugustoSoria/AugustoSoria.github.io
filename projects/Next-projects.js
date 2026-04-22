@@ -7,8 +7,10 @@ export function NextProjects(){
                 <div class="card-body">
                     <div class="tech-img-container">
                         <img style="width: 30px;" src="img/skills/nextjsw.png"/>
+                        <img style="width: 30px;" src="img/skills/python.png"/>
+                        <img style="width: 30px;" src="img/skills/fastapi.png"/>
                     </div>
-                    <p class="card-text translatable" id="cineearsDescription">Aplicación construida con Next.js 14, Server-Side Rendering y API Routes para la practica de la escucha del inglés.</p>
+                    <p class="card-text translatable" id="cineearsDescription">Next.js 14 con SSR para inglés listening. Clippy como widget/microfrontend conectado a microservicio Python/FastAPI.</p>
                 </div>
             </div>
         `
