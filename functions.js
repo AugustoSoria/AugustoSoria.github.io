@@ -1,5 +1,5 @@
 import { ReactProjects } from './projects/React-projects.js'
-import { AngularProjects } from './projects/Angular-projects.js'
+// import { AngularProjects } from './projects/Angular-projects.js'
 import { NodeProjects } from './projects/Node-projects.js'
 import { NextProjects } from './projects/Next-projects.js'
 import translations from './translations.js'
@@ -132,7 +132,7 @@ function showProject(evt, $div) {
     
     if(evt.target.parentElement.id === btn_ids[0]) $div.innerHTML = NextProjects()
     if(evt.target.parentElement.id === btn_ids[1]) $div.innerHTML = ReactProjects()
-    if(evt.target.parentElement.id === btn_ids[2]) $div.innerHTML = AngularProjects()
+    // if(evt.target.parentElement.id === btn_ids[2]) $div.innerHTML = AngularProjects()
     if(evt.target.parentElement.id === btn_ids[3]) $div.innerHTML = NodeProjects()
     
     $div.classList.add('show')
