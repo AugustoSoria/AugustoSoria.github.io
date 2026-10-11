@@ -50,6 +50,23 @@ function renderSummary() {
     return section('profile', ui.profileTitle, t(profile.summary).map(p => `<p>${p}</p>`).join(''))
 }
 
+// Descripción, viñetas y tecnologías: las comparten un empleo simple y cada proyecto de un empleo
+const workDetail = item => `
+    <p>${t(item.intro)}</p>
+    <ul class="cv-bullets">${t(item.bullets).map(b => `<li>${b}</li>`).join('')}</ul>
+    ${tags(item.tech)}`
+
+function renderProject(project) {
+    return `
+        <div class="cv-project">
+            <div class="cv-item-head">
+                <h4>${t(project.name)}</h4>
+                <span class="cv-date">${period(project.start, project.end)}</span>
+            </div>
+            ${workDetail(project)}
+        </div>`
+}
+
 function renderExperience() {
     const jobs = experience.map(job => `
         <article class="cv-item">
@@ -58,9 +75,7 @@ function renderExperience() {
                 <span class="cv-date">${period(job.start, job.end)}</span>
             </div>
             <p class="cv-muted">${t(job.mode)}</p>
-            <p>${t(job.intro)}</p>
-            <ul class="cv-bullets">${t(job.bullets).map(b => `<li>${b}</li>`).join('')}</ul>
-            ${tags(job.tech)}
+            ${job.projects ? job.projects.map(renderProject).join('') : workDetail(job)}
         </article>`).join('')
     return section('experience', ui.experienceTitle, jobs)
 }

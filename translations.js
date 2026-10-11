@@ -2,7 +2,7 @@ const translations = {
   español: {
     homeLink: "Inicio",
     aboutLink: "Sobre mí",
-    presentation: "Hola! Soy un desarrollador Full-Stack con mas de 3 años de experiencia en el ciclo completo de desarrollo de aplicaciones. Desde la arquitectura y modelado de datos hasta la implementación del diseño y la UX/UI.",
+    presentation: "Hola! Soy un desarrollador Full-Stack con más de 4 años de experiencia en el ciclo completo de desarrollo de aplicaciones. Desde la arquitectura y modelado de datos hasta la implementación del diseño y la UX/UI.",
     aboutMeTitle: "Sobre mí",
     aboutMe: "Disfruto tanto del desafío técnico que presenta la arquitectura de software como de la satisfacción de ver un producto funcional en producción y su mantenimiento. Siempre buscando aprender nuevas tecnologías y mejorar mis habilidades en este constante camino del desarrollo.",
     cvBtn: "Ver Currículum",
@@ -25,7 +25,7 @@ const translations = {
   english: {
     homeLink: "Home",
     aboutLink: "About me",
-    presentation: "Hello! I'm a Full-Stack Developer with over 3 years of experience in the complete application development lifecycle. From architecture and data modeling to design implementation and UX/UI.",
+    presentation: "Hello! I'm a Full-Stack Developer with over 4 years of experience in the complete application development lifecycle. From architecture and data modeling to design implementation and UX/UI.",
     aboutMeTitle: "About Me",
     aboutMe: "I enjoy both the technical challenges of software architecture and the satisfaction of seeing a functional product in production and its maintenance. Always looking to learn new technologies and improve my skills on this constant journey of development.",
     cvBtn: "See Resume",
