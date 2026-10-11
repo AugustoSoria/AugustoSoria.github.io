@@ -320,7 +320,7 @@ p.arrow {
     font-size: large;
 }
 
-#cvBtn {
+#cvBtn, #cvFullBtn {
     color: var(--font);
     background-color: var(--prominent);
     height: 40px;
@@ -328,6 +328,12 @@ p.arrow {
     border: none;
     border-radius: 10px;
     font-size: medium;
+}
+
+#cvFullBtn {
+    background-color: transparent;
+    border: 1px solid var(--prominent);
+    margin-left: .5em;
 }
 
 #skill-container {
@@ -574,44 +580,6 @@ img.card-img-top {
     transform: scale(1.1);
 }
 
-/* ----- CONTACTO ----- */
-
-#contact h2{ 
-    margin-bottom: 2em;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    align-items: center;
-}
-form input, label {
-    width: 370px;
-}
-
-form input {
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid var(--font);
-    margin: 1em 0;
-    color: var(--font);
-}
-
-form textarea {
-    width: 370px;
-    margin: 1em 0px;
-    border-radius: 10px;
-    resize: none;
-}
-
-button[type=submit] {
-    border-radius: 10px;
-    border: none;
-    width: 370px;
-    height: 26px;
-}
-
 /* ----- FOOTER -----  */
 
 footer {
@@ -790,12 +758,6 @@ footer svg:hover {
         background: rgba(34, 40, 49, 0.9);
         padding: 1em 0;
         margin: 0;
-    }
-    
-    /* Formularios adaptados */
-    form label, form input, form textarea, form button[type="submit"] {
-        width: 100%;
-        max-width: 350px;
     }
     
     /* Portfolio adaptado */

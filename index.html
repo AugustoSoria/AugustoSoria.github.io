@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="shortcut icon" type="image/x-icon" href="img\icono.ico"/>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cv.css">
     <title>Augusto Soria - Full-Stack Developer</title>
 </head>
 <body>
@@ -24,7 +25,7 @@
                         <a href="#portfolio" class="border-effect">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#contact" class="border-effect translatable" id="contactLink">Contacto</a>
+                        <a href="#cv" class="border-effect">CV</a>
                     </li>
                     <hr/>
                     <li>
@@ -51,6 +52,11 @@
                             <a href="cv\Augusto_Soria_CV.pdf" id="resumeAnchor" class="translatable" target="_blank">
                                 <button type="button" id="cvBtn" class="translatable">
                                     Ver Currículum
+                                </button>
+                            </a>
+                            <a href="#cv">
+                                <button type="button" id="cvFullBtn" class="translatable">
+                                    CV completo
                                 </button>
                             </a>
                         </div>
@@ -95,22 +101,11 @@
                     </section>
                 </div>
         
-                <!-- CONTACTO -->
-                <div class="section-content" data-section="contact">
-                    <section id="contact"  class="trans4">
-                        <h2 id="contactTitle" class="translatable">Contacto</h2>
-                            <form id="form" action="" method="post" >
-                                <label for="name" id="formFullName" class="translatable">Nombre Completo</label>
-                                <input name="name" type="text" id="name" required>
-                                <label for="email" id="formEmail" class="translatable">Correo electrónico</label>
-                                <input name="email" type="text" id="email" required>
-                                <label for="message" id="formMessage" class="translatable">Mensaje</label>
-                                <textarea id="message" name="message" cols="30" rows="10" required></textarea>
-                                <button type="submit" id="formSendBtn" class="translatable">Enviar mensaje</button>
-                            </form>
-                            <a href="mailto:augustosoria@hotmail.es" id="mailto"></a>
-                    </section>
+                <!-- CV EXTENDIDO (contenido generado por cv.js a partir de cv-data.js) -->
+                <div class="section-content" data-section="cv">
+                    <section id="cv-content" class="cv"></section>
                 </div>
+
             </div>
 
             <!-- COLUMNA DERECHA - PRESENTACIÓN FIJA -->

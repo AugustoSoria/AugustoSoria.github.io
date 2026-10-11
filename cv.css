@@ -1,0 +1,298 @@
+/* ----- CV EXTENDIDO (sección #cv) ----- */
+
+/* Con la sección CV activa el contenido ocupa todo el ancho con scroll, y la medusa queda detrás */
+body[data-section="cv"] {
+    overflow-y: auto;
+    line-height: 1.6;
+    /* Sin la animación de escala del body: en una sección larga hace temblar el texto */
+    animation: none;
+    background-attachment: fixed;
+}
+
+body[data-section="cv"] .split-container {
+    height: auto;
+}
+
+body[data-section="cv"] .right-column {
+    width: 100%;
+    overflow: visible;
+}
+
+/* Desktop: la medusa queda fija en la mitad derecha, con el mismo tamaño y opacidad que en las demás secciones.
+   En mobile no se toca: style.css ya la pone de fondo a pantalla completa. */
+@media (min-width: 769px) {
+    body[data-section="cv"] .left-column {
+        position: fixed;
+        top: 55px;
+        right: 0;
+        z-index: 0;
+        pointer-events: none;
+    }
+}
+
+.section-content.active[data-section="cv"] {
+    display: block;
+}
+
+/* El id no es "cv" a propósito: así el navegador no salta al ancla #cv y esconde el navbar */
+/* style.css centra todas las <section> con flex; el CV se lee mejor alineado a la izquierda */
+section.cv {
+    display: block;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 1.5em auto 3em;
+    padding: 2.5em 2.5em 3em;
+    /* Efecto vidrio: deja ver la medusa y el fondo desenfocados detrás del texto */
+    background: rgb(10 25 41 / 35%);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid rgb(238 238 238 / 12%);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgb(0 0 0 / 35%);
+}
+
+.cv a {
+    color: var(--prominent);
+}
+
+.cv a:hover {
+    text-decoration: underline;
+}
+
+.cv p {
+    margin: .3em 0;
+}
+
+/* ----- HEADER ----- */
+
+.cv-header {
+    padding-bottom: 1.5em;
+    border-bottom: 2px solid var(--prominent);
+}
+
+.cv-header h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin: 0;
+}
+
+.cv-subtitle {
+    font-size: 1.1rem;
+    color: var(--prominent);
+}
+
+.cv-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4em 1.2em;
+    list-style: none;
+    padding: 0;
+    margin: .8em 0 0;
+}
+
+/* ----- SECCIONES ----- */
+
+.cv-section {
+    display: block;
+    padding: 0;
+    margin-top: 2.5em;
+}
+
+.cv-section h2 {
+    color: var(--prominent);
+    font-size: 1.3rem;
+    margin: 0 0 .8em;
+    padding-bottom: .3em;
+    border-bottom: 1px solid rgb(238 238 238 / 20%);
+}
+
+.cv-section h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.cv-item {
+    padding: 1em 1.2em;
+    margin-bottom: 1em;
+    background: rgb(238 238 238 / 5%);
+    border-radius: 10px;
+    border-left: 3px solid var(--prominent);
+}
+
+.cv-item-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: .2em 1em;
+}
+
+.cv-accent {
+    color: var(--prominent);
+}
+
+.cv-date {
+    font-size: .85rem;
+    white-space: nowrap;
+    opacity: .8;
+}
+
+.cv-muted {
+    opacity: .7;
+    font-size: .9rem;
+}
+
+.cv-bullets {
+    padding-left: 1.2em;
+    margin: .6em 0;
+}
+
+.cv-bullets li {
+    margin-bottom: .3em;
+}
+
+/* ----- TAGS ----- */
+
+.cv-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4em;
+    list-style: none;
+    padding: 0;
+    margin: .6em 0 0;
+}
+
+.cv-tags li {
+    font-size: .8rem;
+    padding: .15em .7em;
+    border-radius: 999px;
+    border: 1px solid rgb(0 173 181 / 60%);
+    background: rgb(0 173 181 / 10%);
+}
+
+.cv-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.2em;
+}
+
+/* ----- CERTIFICACIONES ----- */
+
+.cv-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
+    margin-bottom: 1em;
+}
+
+.cv-filter {
+    color: var(--font);
+    background: transparent;
+    border: 1px solid rgb(238 238 238 / 30%);
+    border-radius: 999px;
+    padding: .3em .9em;
+    font-size: .85rem;
+    transition: all ease-in-out .2s;
+}
+
+.cv-filter span {
+    opacity: .6;
+}
+
+.cv-filter:hover, .cv-filter.active {
+    border-color: var(--prominent);
+    background: var(--prominent);
+}
+
+.cv-certs, .cv-courses, .cv-languages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Lista con altura máxima y scroll sin barra visible. Los degradados arriba/abajo indican que hay más
+   contenido; cv.js agrega .can-scroll-up / .can-scroll-down según la posición del scroll. */
+.cv-certs {
+    max-height: 420px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+}
+
+.cv-certs::-webkit-scrollbar {
+    display: none;
+}
+
+.cv-certs.can-scroll-down {
+    mask-image: linear-gradient(to bottom, #000 80%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent);
+}
+
+.cv-certs.can-scroll-up {
+    mask-image: linear-gradient(to top, #000 80%, transparent);
+    -webkit-mask-image: linear-gradient(to top, #000 80%, transparent);
+}
+
+.cv-certs.can-scroll-up.can-scroll-down {
+    mask-image: linear-gradient(to bottom, transparent, #000 15%, #000 85%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 15%, #000 85%, transparent);
+}
+
+.cv-cert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    padding: .7em 0;
+    border-bottom: 1px solid rgb(238 238 238 / 10%);
+}
+
+.cv-cert-name {
+    font-weight: bold;
+}
+
+.cv-link {
+    white-space: nowrap;
+    font-size: .85rem;
+}
+
+/* ----- EN CURSO ----- */
+
+.cv-course {
+    padding: .7em 0;
+    border-bottom: 1px solid rgb(238 238 238 / 10%);
+}
+
+/* Los nombres de los cursos linkean a su página, pero se ven como el resto del texto */
+.cv .cv-course a {
+    color: var(--font);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.cv .cv-course a:hover {
+    color: var(--prominent);
+}
+
+.cv-languages li {
+    margin-bottom: .3em;
+}
+
+/* ----- RESPONSIVE ----- */
+
+@media (max-width: 768px) {
+    /* En mobile el navbar es fijo (style.css), así que el CV arranca debajo */
+    section.cv {
+        margin: 60px 10px 2em;
+        padding: 1.5em 16px 2em;
+    }
+
+    .cv-cert {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .2em;
+    }
+}
+

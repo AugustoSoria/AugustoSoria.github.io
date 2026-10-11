@@ -1,13 +1,10 @@
 import { NextProjects } from './projects/Next-projects.js'
+import './cv.js'
 import { removeModals, showProject, openModalProjectsLinks, changeLanguage, router, initializeCarousel } from './functions.js'
 
 const translateBtn = document.querySelector("#translateBtn")
 const projectsContainer = document.querySelector('.projects-container')
 const projectBtns = document.querySelector('div.portfolio-btns')
-const $form = document.querySelector('#form')
-const $inputEmail = document.querySelector('#email')
-const $textarea = document.querySelector('#message')
-const mailto = document.querySelector('#mailto')
 
 document.documentElement.addEventListener('click', removeModals)
 
@@ -24,6 +21,14 @@ projectBtns.addEventListener('click', (evt) => showProject(evt, $divProjectCards
 
 projectsContainer.addEventListener('click', openModalProjectsLinks)
 
+// Restaura el idioma elegido (también traduce la sección CV)
+try {
+    if (localStorage.getItem('lang') === 'english') {
+        translateBtn.checked = true
+        changeLanguage({ target: translateBtn })
+    }
+} catch {}
+
 // Initialize carousel after projects are loaded
 setTimeout(() => {
     initializeCarousel()
@@ -31,11 +36,3 @@ setTimeout(() => {
 
 // -------------------------------- CSS animations --------------------------------
 // GSAP eliminado - las animaciones ahora usan CSS
-
-// -------------------------------- E-mail contact --------------------------------
-$form.addEventListener('submit', (e) => {
-    e.preventDefault()
-
-    mailto.setAttribute('href', `mailto:augustosoria@hotmail.es?subject=mensaje de: ${$inputEmail.value}&body=${$textarea.value}`)
-    mailto.click()
-})

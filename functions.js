@@ -49,6 +49,9 @@ const router = {
     
     showSection(sectionId) {
         let found = false;
+        // El CSS usa este atributo para cambiar el layout según la sección (ej: #cv a ancho completo)
+        document.body.dataset.section = sectionId;
+        window.scrollTo(0, 0);
         
         this.sections.forEach(section => {
             if (section.dataset.section === sectionId) {
@@ -59,9 +62,9 @@ const router = {
             }
         });
         
-        // Fallback to home if section not found
-        if (!found && sectionId !== 'home') {
-            this.showSection('home');
+        // Fallback to about if section not found (ej: links viejos a #contact)
+        if (!found && sectionId !== 'about') {
+            this.showSection('about');
         }
     },
     
@@ -196,7 +199,10 @@ function translate() {
 
 function changeLanguage(evt) {
     language = evt.target.checked ? "english" : "español"
+    // Se recuerda para restaurarlo al recargar
+    try { localStorage.setItem('lang', language) } catch {}
     translate()
+    document.dispatchEvent(new CustomEvent('languagechange', { detail: language }))
 }
 
 // Carousel Functions
