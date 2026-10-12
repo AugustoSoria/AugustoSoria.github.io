@@ -20,6 +20,7 @@ const translations = {
     ssrNewsAppDescription: "Responsivo Server Side Rendering challenge hecho con React, React-Router, Express y Node. From scratch.",
     jpaEcommerceDescription: "E-Commerce el cual hace uso de las especificaciones de JPA para el filtrado de datos.",
     cineearsDescription: "Next.js 14 con SSR para inglés listening. Clippy como widget/microfrontend conectado a microservicio Python/FastAPI.",
+    resumidorDescription: "Resumidor con IA: Next.js en S3/CloudFront, API serverless (Lambda, API Gateway, DynamoDB) y Claude en Bedrock. Infra con SAM.",
     resumeAnchor: "cv/Augusto_Soria_CV.pdf"
   },
   english: {
@@ -43,6 +44,7 @@ const translations = {
     ssrNewsAppDescription: "Responsive Server Side Rendering challenge created with React, React-Router, Express and Node. From scratch.",
     jpaEcommerceDescription: "E-Commerce which make use of JPA specification for data filtering.",
     cineearsDescription: "Next.js 14 app with SSR for English listening practice. Clippy widget as microfrontend talking with Python/FastAPI.",
+    resumidorDescription: "AI summarizer: Next.js on S3/CloudFront, serverless API (Lambda, API Gateway, DynamoDB) and Claude on Bedrock. Infra with SAM.",
     resumeAnchor: "cv/Augusto_Soria_Resume.pdf"
   },
 }
