@@ -53,8 +53,6 @@ export const experience = [
     projects: [
       {
         name: { es: 'Agente IA de soporte (RAG)', en: 'AI support agent (RAG)' },
-        start: '2026-10',
-        end: null,
         intro: {
           es: 'Asistente que responde consultas de soporte sobre la documentación de ROADNET y RNA.',
           en: 'Assistant that answers support questions about the ROADNET and RNA documentation.',
@@ -75,12 +73,10 @@ export const experience = [
             'Deployment on AWS EC2 with Nginx and systemd, with an automated update script.',
           ],
         },
-        tech: ['Python', 'FastAPI', 'LangChain', 'FAISS', 'Hugging Face', 'RAG', 'Angular', 'AWS EC2', 'Nginx'],
+        tech: ['Python', 'FastAPI', 'LangChain', 'FAISS', 'Hugging Face', 'RAG', 'Angular', 'AWS EC2', 'Nginx', 'SDD'],
       },
       {
         name: { es: 'pkConnector, plataforma de integración (iPaaS)', en: 'pkConnector, integration platform (iPaaS)' },
-        start: '2026-02',
-        end: null,
         intro: {
           es: 'Motor ELT on-premise para intercambiar datos entre SAP, ROADNET y RNA.',
           en: 'On-premise ELT engine to exchange data between SAP, ROADNET and RNA.',
@@ -89,7 +85,7 @@ export const experience = [
           es: [
             'Amplié el motor de transformación: mapeo de arrays, arrays anidados y arrays de objetos con múltiples items, y autodetección del formato de fecha de origen.',
             'Implementé el enriquecimiento desde DataStores: lookups configurables desde el wizard, claves compuestas y construcción de objetos a partir de los datos cacheados.',
-            'Agregué archivos Excel como origen de datos, procesados por el motor de colas (RabbitMQ).',
+            'Agregué archivos Excel como origen de datos, procesados por el motor de colas (RabbitMQ con Redis).',
             'Desarrollé gran parte del wizard de mapeo en Angular: selector de campos en árbol, vista previa del payload y visor JSON; optimicé su carga y su performance.',
             'Construí el editor de modelos canónicos con propiedades anidadas y validaciones.',
             'Redefiní roles y permisos (RBAC), manejé la expiración del JWT en el frontend y agregué links de activación y cambio de contraseña.',
@@ -99,7 +95,7 @@ export const experience = [
           en: [
             'Extended the transformation engine: mapping of arrays, nested arrays and object arrays with multiple items, plus automatic detection of the source date format.',
             'Implemented DataStore enrichment: lookups configurable from the wizard, composite keys and building objects from cached data.',
-            'Added Excel files as a data source, processed by the queue engine (RabbitMQ).',
+            'Added Excel files as a data source, processed by the queue engine (RabbitMQ with Redis).',
             'Built most of the Angular mapping wizard: tree field picker, payload preview and JSON viewer; optimized its loading and performance.',
             'Built the canonical model editor with nested properties and validations.',
             'Redesigned roles and permissions (RBAC), handled JWT expiration on the frontend and added activation and password reset links.',
@@ -107,12 +103,10 @@ export const experience = [
             'Unit and integration tests (Jest, Vitest) for each feature, and Claude Code rules and skills for the team.',
           ],
         },
-        tech: ['Angular', 'TailwindCSS', 'TypeScript', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'RabbitMQ', 'Docker', 'Jest', 'Vitest', 'Claude Code'],
+        tech: ['Angular', 'TailwindCSS', 'TypeScript', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'RabbitMQ', 'Redis', 'Docker', 'Jest', 'Vitest', 'Claude Code', 'SDD'],
       },
       {
         name: { es: 'Tracking y optimización de rutas', en: 'Tracking and route optimization' },
-        start: '2024-09',
-        end: '2026-01',
         intro: {
           es: 'Desarrollo end-to-end de una aplicación de tracking de vehículos, secuenciación y optimización de rutas.',
           en: 'End-to-end development of a vehicle tracking, route sequencing and route optimization application.',
@@ -125,7 +119,7 @@ export const experience = [
             'Sincronización y migración de datos de la app mobile desde Firebase hacia SQL Server.',
             'Integraciones con Twilio y NodeMailer para enviar SMS, WhatsApp y correos ante eventos del sistema.',
             'Refactorización de componentes legacy: mejor rendimiento y tiempos de carga, menor consumo de recursos, código centralizado y reutilizable, y mejor usabilidad siguiendo los lineamientos de diseño en Figma.',
-            'Uso de herramientas de IA asistida (Claude Code, Codex) para acelerar features, refactors y documentación técnica.',
+            'Uso de herramientas de IA asistida (Claude Code, Codex) con Spec-Driven Development (SDD) como metodología de trabajo, para acelerar features, refactors y documentación técnica.',
           ],
           en: [
             'Route planning based on orders and multiple user-defined parameters, by consuming, studying and adapting several APIs.',
@@ -134,10 +128,10 @@ export const experience = [
             'Synchronization and migration of the mobile app data from Firebase to SQL Server.',
             'Twilio and NodeMailer integrations to send SMS, WhatsApp messages and emails on system events.',
             'Legacy component refactoring: better performance and load times, lower resource usage, centralized and reusable code, and improved usability following Figma design guidelines.',
-            'AI-assisted development (Claude Code, Codex) to speed up features, refactors and technical documentation.',
+            'AI-assisted development (Claude Code, Codex) following Spec-Driven Development (SDD), to speed up features, refactors and technical documentation.',
           ],
         },
-        tech: ['Angular', 'TypeScript', 'RxJS', 'SASS', 'Node.js', 'REST APIs', 'SQL Server', 'Firebase', 'Twilio', 'NodeMailer', 'Figma'],
+        tech: ['Angular', 'TypeScript', 'RxJS', 'SASS', 'Node.js', 'REST APIs', 'SQL Server', 'Firebase', 'Twilio', 'NodeMailer', 'Figma', 'SDD'],
       },
     ],
   },
@@ -176,11 +170,11 @@ export const experience = [
 export const skills = [
   { group: 'Frontend', items: ['Angular', 'TypeScript', 'RxJS', 'React', 'Next.js', 'React Query', 'Zustand', 'HTML5', 'CSS3', 'SASS', 'Angular Material', 'Bootstrap', 'SSR', 'TailwindCSS', 'Responsive Design', 'React Native', 'NativeScript'] },
   { group: 'Backend', items: ['Node.js', 'Express', 'Java', 'Spring Boot', 'Hibernate', 'REST APIs', 'JWT', { es: 'Microservicios', en: 'Microservices' }, 'Mongoose', 'Prisma', 'RabbitMQ', 'Python', 'FastAPI', 'GraphQL', 'Kotlin'] },
-  { group: { es: 'Bases de datos', en: 'Databases' }, items: ['MySQL', 'PostgreSQL', 'SQL Server', 'MongoDB', 'Firebase', 'Liquibase'] },
+  { group: { es: 'Bases de datos', en: 'Databases' }, items: ['MySQL', 'PostgreSQL', 'SQL Server', 'MongoDB', 'Redis', 'Firebase', 'Liquibase'] },
   { group: 'DevOps / Cloud', items: ['Docker', 'Docker Compose', 'Google Cloud Platform', 'AWS EC2', 'Nginx', 'CI/CD', 'Linux', 'Git', 'GitHub'] },
   { group: 'Testing', items: ['Jest', 'Vitest', 'Jasmine', 'Karma', 'Mocha', 'Chai'] },
   { group: { es: 'IA y datos', en: 'AI & data' }, items: ['Claude Code', 'Codex', 'Cursor', 'Windsurf', 'RAG', 'Memory', 'LangChain', 'FAISS', 'Hugging Face', 'Tool calling', 'Machine Learning', 'NumPy'] },
-  { group: { es: 'Metodologías', en: 'Methodologies' }, items: ['Scrum', 'Agile'] },
+  { group: { es: 'Metodologías', en: 'Methodologies' }, items: ['Scrum', 'Agile', 'SDD'] },
 ]
 
 export const education = [
@@ -203,7 +197,7 @@ export const education = [
     title: { es: 'Técnico Electrónico, orientación Telecomunicaciones', en: 'Electronics Technician, Telecommunications' },
     start: '2012',
     end: '2017',
-    detail: { es: 'Formación técnica en lógica, resolución de problemas y sistemas.', en: 'Technical training in logic, problem solving and systems.' },
+    detail: { es: 'Formación técnica en lógica, sistemas y programación de microcontroladores.', en: 'Technical training in logic, systems and microcontroller programming.' },
   },
 ]
 
@@ -220,33 +214,34 @@ const eit = (name, date, id, category) => ({
   name, issuer: 'EducacionIT', date, category, id: `505108/${id}`, url: EDUCACIONIT + id,
 })
 
-// Ordenadas de la más reciente a la más antigua
+// Ordenadas de la más reciente a la más antigua. En las de EducacionIT, nombre y fecha son
+// los del certificado (fecha de emisión, no la de fin del curso).
 export const certifications = [
   { name: 'Advanced Learning Algorithms', issuer: 'DeepLearning.AI · Coursera', date: '2026-06', category: 'ai', id: '0R2WTISL4DPH', url: 'https://www.coursera.org/account/accomplishments/verify/0R2WTISL4DPH' },
   { name: 'Supervised Machine Learning: Regression and Classification', issuer: 'DeepLearning.AI · Coursera', date: '2026-05', category: 'ai', id: 'PJ7W4LX21427', url: 'https://www.coursera.org/account/accomplishments/verify/PJ7W4LX21427' },
-  eit({ es: 'Introducción a Python', en: 'Introduction to Python' }, '2025-08', 76860, 'backend'),
-  eit('Google Cloud Platform Fundamentals', '2023-12', 62832, 'cloud'),
-  eit({ es: 'Android Avanzado en Kotlin', en: 'Advanced Android with Kotlin' }, '2023-05', 62063, 'cloud'),
-  eit('Java Spring Boot', '2023-03', 62201, 'backend'),
+  eit({ es: 'Introducción a Python', en: 'Introduction to Python' }, '2025-09', 76860, 'backend'),
+  eit('Google Cloud Platform Fundamentals', '2024-02', 62832, 'cloud'),
+  eit({ es: 'Android Avanzado en Kotlin', en: 'Advanced Android with Kotlin' }, '2023-06', 62063, 'cloud'),
+  eit('Java Spring', '2023-06', 62201, 'backend'),
   eit('Java Standard 11 Web Programming', '2023-02', 61933, 'backend'),
   { name: 'Back End Development and APIs', issuer: 'freeCodeCamp', date: '2022-04', category: 'backend', url: 'https://www.freecodecamp.org/certification/fccf30b95d0-a474-47ee-b199-5c17a1107aa7/back-end-development-and-apis' },
-  eit({ es: 'Introducción a Bases de Datos y SQL', en: 'Introduction to Databases and SQL' }, '2022-01', 55957, 'data'),
-  eit({ es: 'MongoDB Avanzado', en: 'Advanced MongoDB' }, '2021-12', 52949, 'data'),
-  eit({ es: 'Arquitectura avanzada en Node.js', en: 'Advanced Node.js Architecture' }, '2021-11', 50443, 'backend'),
-  eit({ es: 'Scrum Fundamentos', en: 'Scrum Fundamentals' }, '2021-11', 55756, 'other'),
-  eit({ es: 'Presupuesto Digital', en: 'Digital Budgeting' }, '2021-11', 55964, 'other'),
-  eit('Angular 11', '2021-11', 49642, 'frontend'),
-  eit({ es: 'React.js Avanzado', en: 'Advanced React.js' }, '2021-10', 50454, 'frontend'),
-  eit({ es: 'Node.js y MongoDB', en: 'Node.js and MongoDB' }, '2021-09', 49655, 'backend'),
-  eit('React.js', '2021-09', 54318, 'frontend'),
-  eit({ es: 'Git: Desarrollo Colaborativo', en: 'Git: Collaborative Development' }, '2021-08', 54450, 'other'),
-  eit('Javascript PWA (Progressive Web App)', '2021-08', 52126, 'frontend'),
-  eit({ es: 'Introducción al Paradigma de Objetos', en: 'Introduction to Object-Oriented Programming' }, '2021-08', 54424, 'other'),
-  eit({ es: 'MongoDB Fundamentos', en: 'MongoDB Fundamentals' }, '2021-06', 50998, 'data'),
-  eit({ es: 'Javascript Desarrollador Avanzado', en: 'Advanced Javascript Developer' }, '2021-06', 52136, 'frontend'),
-  eit({ es: 'Maquetador Web Avanzado (HTML5 y CSS3)', en: 'Advanced Web Layout (HTML5 & CSS3)' }, '2021-05', 53408, 'frontend'),
-  eit({ es: 'Javascript desde cero', en: 'Javascript from scratch' }, '2021-04', 45988, 'frontend'),
-  eit({ es: 'Desarrollo Web con HTML', en: 'Web Development with HTML' }, '2021-02', 52277, 'frontend'),
+  eit({ es: 'Introducción a Bases de Datos y SQL', en: 'Introduction to Databases and SQL' }, '2022-02', 55957, 'data'),
+  eit({ es: 'Mongo DB Avanzado', en: 'Advanced Mongo DB' }, '2021-12', 52949, 'data'),
+  eit({ es: 'React.JS Avanzado', en: 'Advanced React.JS' }, '2021-12', 50454, 'frontend'),
+  eit('Angular 11', '2021-12', 49642, 'frontend'),
+  eit({ es: 'Presupuesto Web', en: 'Web Budgeting' }, '2021-12', 55964, 'other'),
+  eit({ es: 'Git: Desarrollo Colaborativo', en: 'Git: Collaborative Development' }, '2021-12', 54450, 'other'),
+  eit({ es: 'Introducción al Paradigma de Objetos', en: 'Introduction to Object-Oriented Programming' }, '2021-12', 54424, 'other'),
+  eit({ es: 'Maquetación Web: HTML 5 y CSS3', en: 'Web Layout: HTML 5 and CSS3' }, '2021-12', 53408, 'frontend'),
+  eit({ es: 'HTML5: Fundamentos Web', en: 'HTML5: Web Fundamentals' }, '2021-12', 52277, 'frontend'),
+  eit({ es: 'Arquitectura avanzada en Node js', en: 'Advanced Node js Architecture' }, '2021-12', 50443, 'backend'),
+  eit('React.JS', '2021-12', 54318, 'frontend'),
+  eit({ es: 'Scrum Fundamentos', en: 'Scrum Fundamentals' }, '2021-12', 55756, 'other'),
+  eit({ es: 'Node.js y Mongo DB', en: 'Node.js and Mongo DB' }, '2021-09', 49655, 'backend'),
+  eit({ es: 'Mongo DB Fundamentos', en: 'Mongo DB Fundamentals' }, '2021-09', 50998, 'data'),
+  eit('Javascript AWP', '2021-09', 52126, 'frontend'),
+  eit({ es: 'Javascript Desarrollador Avanzado', en: 'Advanced Javascript Developer' }, '2021-08', 52136, 'frontend'),
+  eit({ es: 'Javascript desde cero', en: 'Javascript from scratch' }, '2021-08', 45988, 'frontend'),
 ]
 
 // Se muestran en este orden

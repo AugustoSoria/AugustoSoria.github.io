@@ -59,10 +59,7 @@ const workDetail = item => `
 function renderProject(project) {
     return `
         <div class="cv-project">
-            <div class="cv-item-head">
-                <h4>${t(project.name)}</h4>
-                <span class="cv-date">${period(project.start, project.end)}</span>
-            </div>
+            <h4>${t(project.name)}</h4>
             ${workDetail(project)}
         </div>`
 }
