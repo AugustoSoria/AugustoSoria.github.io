@@ -119,6 +119,7 @@ export const experience = [
             'Sincronización y migración de datos de la app mobile desde Firebase hacia SQL Server.',
             'Integraciones con Twilio y NodeMailer para enviar SMS, WhatsApp y correos ante eventos del sistema.',
             'Refactorización de componentes legacy: mejor rendimiento y tiempos de carga, menor consumo de recursos, código centralizado y reutilizable, y mejor usabilidad siguiendo los lineamientos de diseño en Figma.',
+            'Actualización de Angular de la versión 17 a la 21.',
             'Uso de herramientas de IA asistida (Claude Code, Codex) con Spec-Driven Development (SDD) como metodología de trabajo, para acelerar features, refactors y documentación técnica.',
           ],
           en: [
@@ -128,6 +129,7 @@ export const experience = [
             'Synchronization and migration of the mobile app data from Firebase to SQL Server.',
             'Twilio and NodeMailer integrations to send SMS, WhatsApp messages and emails on system events.',
             'Legacy component refactoring: better performance and load times, lower resource usage, centralized and reusable code, and improved usability following Figma design guidelines.',
+            'Angular upgrade from version 17 to 21.',
             'AI-assisted development (Claude Code, Codex) following Spec-Driven Development (SDD), to speed up features, refactors and technical documentation.',
           ],
         },
