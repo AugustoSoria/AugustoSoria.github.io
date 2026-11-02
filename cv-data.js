@@ -217,6 +217,8 @@ const eit = (name, date, id, category) => ({
 // Ordenadas de la más reciente a la más antigua. En las de EducacionIT, nombre y fecha son
 // los del certificado (fecha de emisión, no la de fin del curso).
 export const certifications = [
+  { name: { es: 'Diseño de sistemas a gran escala y arquitectura de software', en: 'Large-scale system design and software architecture' }, issuer: 'Udemy', date: '2026-10', category: 'backend', id: 'UC-9100d16b-9961-41fc-884c-92a5d6d133d3', url: 'https://www.udemy.com/certificate/UC-9100d16b-9961-41fc-884c-92a5d6d133d3/' },
+  eit({ es: 'Python con IA: Desarrollo de Agentes y Aplicaciones Inteligentes', en: 'Python with AI: Agent and Intelligent Application Development' }, '2026-10', 85689, 'ai'),
   { name: 'Advanced Learning Algorithms', issuer: 'DeepLearning.AI · Coursera', date: '2026-06', category: 'ai', id: '0R2WTISL4DPH', url: 'https://www.coursera.org/account/accomplishments/verify/0R2WTISL4DPH' },
   { name: 'Supervised Machine Learning: Regression and Classification', issuer: 'DeepLearning.AI · Coursera', date: '2026-05', category: 'ai', id: 'PJ7W4LX21427', url: 'https://www.coursera.org/account/accomplishments/verify/PJ7W4LX21427' },
   eit({ es: 'Introducción a Python', en: 'Introduction to Python' }, '2025-09', 76860, 'backend'),
@@ -255,11 +257,6 @@ export const inProgress = [
     name: { es: 'Introducción a la Ciberseguridad', en: 'Introduction to Cybersecurity' },
     issuer: 'EducacionIT',
     url: 'https://www.educacionit.com/curso-de-introduccion-a-la-ciberseguridad',
-  },
-  {
-    name: { es: 'Diseño de sistemas a gran escala y arquitectura de software', en: 'Large-scale system design and software architecture' },
-    issuer: 'Udemy',
-    url: 'https://www.udemy.com/course/diseno-de-sistemas-a-gran-escala-y-arquitectura-de-software/',
   },
 ]
 
