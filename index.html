@@ -10,6 +10,14 @@
     <link rel="shortcut icon" type="image/x-icon" href="img\icono.ico"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="cv.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+        }
+    }
+    </script>
     <title>Augusto Soria - Full-Stack Developer</title>
 </head>
 <body>
@@ -108,14 +116,8 @@
 
             </div>
 
-            <!-- COLUMNA DERECHA - PRESENTACIÓN FIJA -->
-            <div class="left-column">
-                <div>
-                    <video id="medusa" autoplay loop muted playsinline  style="width: 100%">
-                        <source src="medusa.webm" type="video/webm">
-                    </video>
-                </div>
-            </div>
+            <!-- COLUMNA DERECHA: queda libre para el agujero negro del fondo (blackhole.js) -->
+            <div class="left-column"></div>
         </div>
     
         <footer>
@@ -132,22 +134,7 @@
         </footer>
     </div>
 
-    <!-- Burbujas animadas - Versión 2 (pequeñas) -->
-    <div class="bubble-small"></div>
-    <div class="bubble-small"></div>
-    <div class="bubble-small"></div>
-    <div class="bubble-small"></div>
-    <div class="bubble-small"></div>
-    
-    <!-- Burbujas animadas - Versión 3 (orgánicas) -->
-    <div class="bubble-organic"></div>
-    <div class="bubble-organic"></div>
-    <div class="bubble-organic"></div>
-    <div class="bubble-organic"></div>
-    <div class="bubble-organic"></div>
-    <div class="bubble-organic"></div>
-
-    <script src="speed-control.js"></script>
+    <script type="module" src="./blackhole.js"></script>
     <script type="module" src="./functions.js"></script>
     <script type="module" src="./app.js" defer></script>
 </body>
