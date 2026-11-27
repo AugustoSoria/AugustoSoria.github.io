@@ -8,6 +8,7 @@ const translations = {
     cvBtn: "Ver Currículum",
     cvFullBtn: "CV completo",
     technologies: "Tecnologías",
+    dynamicRagDescription: "Chat con tus PDFs (RAG): respuestas en streaming que citan la página exacta, búsqueda híbrida (embeddings + BM25) y LLM en Groq. Deploy en AWS.",
     cineearsDescription: "Next.js 14 con SSR para practicar el listening del inglés. Asistente Clippy como microfrontend conectado a un microservicio hecho con Python y FastAPI.",
     resumidorDescription: "Resumidor con IA: Next.js en S3/CloudFront, API serverless (Lambda, API Gateway, DynamoDB) y Claude en Bedrock. Infra con SAM.",
     resumeAnchor: "cv/Augusto_Soria_CV.pdf"
@@ -21,6 +22,7 @@ const translations = {
     cvBtn: "See Resume",
     cvFullBtn: "Full CV",
     technologies: "Technologies",
+    dynamicRagDescription: "Chat with your PDFs (RAG): streamed answers citing the exact page, hybrid search (embeddings + BM25) and an LLM on Groq. Deployed on AWS.",
     cineearsDescription: "Next.js 14 app with SSR to practice English listening. Clippy assistant as a microfrontend connected to a microservice built with Python and FastAPI.",
     resumidorDescription: "AI summarizer: Next.js on S3/CloudFront, serverless API (Lambda, API Gateway, DynamoDB) and Claude on Bedrock. Infra with SAM.",
     resumeAnchor: "cv/Augusto_Soria_Resume.pdf"
