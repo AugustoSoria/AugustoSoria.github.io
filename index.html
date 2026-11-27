@@ -10,6 +10,14 @@
     <link rel="shortcut icon" type="image/x-icon" href="img\icono.ico"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="cv.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+        }
+    }
+    </script>
     <title>Augusto Soria - Full-Stack Developer</title>
 </head>
 <body>
@@ -67,20 +75,6 @@
                 <div class="section-content" data-section="portfolio">
                     <section id="portfolio" class="trans3">
                         <h2>Portfolio</h2>
-                        <div class="portfolio-btns">
-                            <div id="next-btn">
-                                <img src="img/skills/nextjsw.png" title="Next.js projects" />
-                            </div>
-                            <!-- <div id="react-btn" class="noActive">
-                                <img src="img/skills/react.png" title="React projects" />
-                            </div> -->
-                            <!-- <div  id="angular-btn" class="noActive">
-                                <img src="img/skills/angular.png" title="Angular projects" />
-                            </div> -->
-                            <div id="node-btn" class="noActive">
-                                <img src="img/skills/node.png" title="NodeJs's APIs projects" />
-                            </div>
-                        </div>
                         <div class="modal-links">
                             <a href="" target="_blank" title="web deploy">
                                 <svg xmlns="http://www.w3.org/2000/svg" style="color: var(--font);" width="30" height="30" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -108,14 +102,8 @@
 
             </div>
 
-            <!-- COLUMNA DERECHA - PRESENTACIÓN FIJA -->
-            <div class="left-column">
-                <div>
-                    <video id="medusa" autoplay loop muted playsinline  style="width: 100%">
-                        <source src="medusa.webm" type="video/webm">
-                    </video>
-                </div>
-            </div>
+            <!-- COLUMNA DERECHA: queda libre para el agujero negro del fondo (blackhole.js) -->
+            <div class="left-column"></div>
         </div>
     
         <footer>
@@ -132,22 +120,7 @@
         </footer>
     </div>
 
-    <!-- Burbujas animadas - Versión 2 (pequeñas) -->
-    <div class="bubble-small"></div>
-    <div class="bubble-small"></div>
-    <div class="bubble-small"></div>
-    <div class="bubble-small"></div>
-    <div class="bubble-small"></div>
-    
-    <!-- Burbujas animadas - Versión 3 (orgánicas) -->
-    <div class="bubble-organic"></div>
-    <div class="bubble-organic"></div>
-    <div class="bubble-organic"></div>
-    <div class="bubble-organic"></div>
-    <div class="bubble-organic"></div>
-    <div class="bubble-organic"></div>
-
-    <script src="speed-control.js"></script>
+    <script type="module" src="./blackhole.js"></script>
     <script type="module" src="./functions.js"></script>
     <script type="module" src="./app.js" defer></script>
 </body>

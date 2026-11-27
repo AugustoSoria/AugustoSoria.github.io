@@ -1,10 +1,9 @@
 import { NextProjects } from './projects/Next-projects.js'
 import './cv.js'
-import { removeModals, showProject, openModalProjectsLinks, changeLanguage, router, initializeCarousel } from './functions.js'
+import { removeModals, openModalProjectsLinks, changeLanguage, router, initializeCarousel } from './functions.js'
 
 const translateBtn = document.querySelector("#translateBtn")
 const projectsContainer = document.querySelector('.projects-container')
-const projectBtns = document.querySelector('div.portfolio-btns')
 
 document.documentElement.addEventListener('click', removeModals)
 
@@ -16,8 +15,6 @@ let $divProjectCardsContainer = document.createElement("div")
 $divProjectCardsContainer.classList.add('project-cards-container')
 $divProjectCardsContainer.innerHTML = NextProjects()
 projectsContainer.appendChild($divProjectCardsContainer);
-
-projectBtns.addEventListener('click', (evt) => showProject(evt, $divProjectCardsContainer))
 
 projectsContainer.addEventListener('click', openModalProjectsLinks)
 

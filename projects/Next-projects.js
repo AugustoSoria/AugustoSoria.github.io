@@ -2,6 +2,18 @@ export function NextProjects(){
 
     return  (
         `
+            <div class="project-card" data-link-web="https://dynamic-rag-five.vercel.app/" data-link-gitHub="https://github.com/AugustoSoria/dynamic-rag">
+                <img src="img/projects/dynamic-rag.png" class="card-img-top" alt="Dynamic RAG">
+                <div class="card-body">
+                    <div class="tech-img-container">
+                        <img style="width: 30px;" src="img/skills/react.png"/>
+                        <img style="width: 30px;" src="img/skills/python.png"/>
+                        <img style="width: 30px;" src="img/skills/fastapi.png"/>
+                        <img style="width: 30px;" src="img/skills/aws.svg"/>
+                    </div>
+                    <p class="card-text translatable" id="dynamicRagDescription">Chat con tus PDFs (RAG): respuestas en streaming que citan la página exacta, búsqueda híbrida (embeddings + BM25) y LLM en Groq. Deploy en AWS.</p>
+                </div>
+            </div>
             <div class="project-card news-card" data-link-web="https://cineears.vercel.app/" data-link-gitHub="">
                 <img src="img/projects/cineears.png" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -10,7 +22,7 @@ export function NextProjects(){
                         <img style="width: 30px;" src="img/skills/python.png"/>
                         <img style="width: 30px;" src="img/skills/fastapi.png"/>
                     </div>
-                    <p class="card-text translatable" id="cineearsDescription">Next.js 14 con SSR para inglés listening. Clippy como widget/microfrontend conectado a microservicio Python/FastAPI.</p>
+                    <p class="card-text translatable" id="cineearsDescription">Next.js 14 con SSR para practicar el listening del inglés. Asistente Clippy como microfrontend conectado a un microservicio hecho con Python y FastAPI.</p>
                 </div>
             </div>
             <div class="project-card" data-link-web="https://d23eskyaokxzzr.cloudfront.net/" data-link-gitHub="https://github.com/AugustoSoria/articulos_resumidor">
