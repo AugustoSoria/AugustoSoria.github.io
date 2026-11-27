@@ -1,13 +1,8 @@
-// import { ReactProjects } from './projects/React-projects.js'
-// import { AngularProjects } from './projects/Angular-projects.js'
-import { NodeProjects } from './projects/Node-projects.js'
-import { NextProjects } from './projects/Next-projects.js'
 import translations from './translations.js'
 
 const navbarUlContainer = document.querySelector('.navbar-ul-container')
 const modal = portfolio.querySelector(".modal-links")
 const projectsContainer = document.querySelector('.projects-container')
-const projectBtnDivs = document.querySelectorAll('div.portfolio-btns div')
 const carouselDots = document.getElementById('carouselDots')
 
 let language = "español";
@@ -103,52 +98,6 @@ function removeModals(evt) {
 
     modal.style.opacity = '0';
     modal.style.left = `-300%`
-}
-
-function showProject(evt, $div) {
-    let btn_ids = ['next-btn', 'react-btn', 'angular-btn', 'node-btn']
-    if(btn_ids.indexOf(evt.target.parentElement.id) == -1) return;
-
-    const filterValues = {
-        "react-btn": "hue-rotate(340deg)",
-        "angular-btn": "hue-rotate(197deg)",
-        "node-btn": "hue-rotate(85deg)",
-        "next-btn": "hue-rotate(0deg)"
-    }
-
-    projectBtnDivs.forEach(div => {
-        let img = div.firstElementChild
-        if(div.id === evt.target.parentElement.id) {
-            div.classList.remove('noActive')
-            img.style.filter = "hue-rotate(360deg)"
-            
-            // Restaurar imagen original
-            if(div.id === 'next-btn') img.src = 'img/skills/nextjsw.png'
-        } else {
-            div.classList.add('noActive')
-            img.style.filter = filterValues[div.id]
-            
-            // Cambiar a imagen gris
-            if(div.id === 'next-btn') img.src = 'img/skills/nextjs.png'
-        }
-    })
-    
-    if(evt.target.parentElement.id === btn_ids[0]) $div.innerHTML = NextProjects()
-    // if(evt.target.parentElement.id === btn_ids[1]) $div.innerHTML = ReactProjects()
-    // if(evt.target.parentElement.id === btn_ids[2]) $div.innerHTML = AngularProjects()
-    if(evt.target.parentElement.id === btn_ids[3]) $div.innerHTML = NodeProjects()
-    
-    $div.classList.add('show')
-    projectsContainer.innerHTML = ""
-    projectsContainer.appendChild($div);
-
-    translate()
-    projectsAnimations()
-    
-    // Reset carousel when switching projects
-    setTimeout(() => {
-        resetCarousel()
-    }, 100)
 }
 
 function openModalProjectsLinks(evt) {
@@ -319,7 +268,6 @@ router.init();
 
 export {
     removeModals,
-    showProject,
     openModalProjectsLinks,
     translate,
     changeLanguage,

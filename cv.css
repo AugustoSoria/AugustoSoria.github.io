@@ -16,6 +16,11 @@ body[data-section="cv"] .right-column {
     overflow: visible;
 }
 
+/* La columna izquierda (vacía, 50%) le quitaría ancho a la derecha en el flex y descentraría el CV */
+body[data-section="cv"] .left-column {
+    display: none;
+}
+
 .section-content.active[data-section="cv"] {
     display: block;
 }
@@ -59,13 +64,13 @@ section.cv {
 }
 
 .cv-header h1 {
-    font-family: 'Inter', sans-serif;
-    font-size: clamp(2rem, 6vw, 3rem);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: var(--fs-xl);
     margin: 0;
 }
 
 .cv-subtitle {
-    font-size: 1.1rem;
+    font-size: var(--fs-base);
     color: var(--prominent);
 }
 
@@ -88,14 +93,14 @@ section.cv {
 
 .cv-section h2 {
     color: var(--prominent);
-    font-size: 1.3rem;
+    font-size: var(--fs-lg);
     margin: 0 0 .8em;
     padding-bottom: .3em;
     border-bottom: 1px solid rgb(238 238 238 / 20%);
 }
 
 .cv-section h3 {
-    font-size: 1rem;
+    font-size: var(--fs-md);
     margin: 0;
 }
 
@@ -107,8 +112,8 @@ section.cv {
 }
 
 .cv-project h4 {
-    font-family: 'Inter', sans-serif;
-    font-size: .95rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: var(--fs-md);
     margin: 0;
     color: var(--prominent);
 }
@@ -134,14 +139,14 @@ section.cv {
 }
 
 .cv-date {
-    font-size: .85rem;
+    font-size: var(--fs-xs);
     white-space: nowrap;
     opacity: .8;
 }
 
 .cv-muted {
     opacity: .7;
-    font-size: .9rem;
+    font-size: var(--fs-xs);
 }
 
 .cv-bullets {
@@ -150,6 +155,7 @@ section.cv {
 }
 
 .cv-bullets li {
+    font-size: var(--fs-sm);
     margin-bottom: .3em;
 }
 
@@ -165,11 +171,11 @@ section.cv {
 }
 
 .cv-tags li {
-    font-size: .8rem;
+    font-size: var(--fs-xs);
     padding: .15em .7em;
     border-radius: 999px;
-    border: 1px solid rgb(0 173 181 / 60%);
-    background: rgb(0 173 181 / 10%);
+    border: 1px solid rgb(var(--prominent-rgb) / 60%);
+    background: rgb(var(--prominent-rgb) / 10%);
 }
 
 .cv-skills {
@@ -193,7 +199,7 @@ section.cv {
     border: 1px solid rgb(238 238 238 / 30%);
     border-radius: 999px;
     padding: .3em .9em;
-    font-size: .85rem;
+    font-size: var(--fs-sm);
     transition: all ease-in-out .2s;
 }
 
@@ -204,6 +210,7 @@ section.cv {
 .cv-filter:hover, .cv-filter.active {
     border-color: var(--prominent);
     background: var(--prominent);
+    color: var(--on-prominent);
 }
 
 .cv-certs, .cv-courses, .cv-languages {
@@ -255,7 +262,7 @@ section.cv {
 
 .cv-link {
     white-space: nowrap;
-    font-size: .85rem;
+    font-size: var(--fs-sm);
 }
 
 /* ----- EN CURSO ----- */

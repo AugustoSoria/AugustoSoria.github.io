@@ -10,7 +10,7 @@ export function NextProjects(){
                         <img style="width: 30px;" src="img/skills/python.png"/>
                         <img style="width: 30px;" src="img/skills/fastapi.png"/>
                     </div>
-                    <p class="card-text translatable" id="cineearsDescription">Next.js 14 con SSR para inglés listening. Clippy como widget/microfrontend conectado a microservicio Python/FastAPI.</p>
+                    <p class="card-text translatable" id="cineearsDescription">Next.js 14 con SSR para practicar el listening del inglés. Asistente Clippy como microfrontend conectado a un microservicio hecho con Python y FastAPI.</p>
                 </div>
             </div>
             <div class="project-card" data-link-web="https://d23eskyaokxzzr.cloudfront.net/" data-link-gitHub="https://github.com/AugustoSoria/articulos_resumidor">
